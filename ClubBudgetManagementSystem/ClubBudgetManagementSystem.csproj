@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClubBudgetConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClubBudgetConfirm.Designer.cs">
+      <DependentUpon>ClubBudgetConfirm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClubBudgetManage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ClubBudgetManage.Designer.cs">
       <DependentUpon>ClubBudgetManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClubBudgetRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClubBudgetRegistration.Designer.cs">
+      <DependentUpon>ClubBudgetRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="ClubRegister.cs">
       <SubType>Form</SubType>
@@ -83,14 +95,32 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Umenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Umenu.Designer.cs">
+      <DependentUpon>Umenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLogin.Designer.cs">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="YearOrMonth.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="YearOrMonth.Designer.cs">
       <DependentUpon>YearOrMonth.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ClubBudgetConfirm.resx">
+      <DependentUpon>ClubBudgetConfirm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClubBudgetManage.resx">
       <DependentUpon>ClubBudgetManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClubBudgetRegistration.resx">
+      <DependentUpon>ClubBudgetRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClubRegister.resx">
       <DependentUpon>ClubRegister.cs</DependentUpon>
@@ -113,6 +143,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Umenu.resx">
+      <DependentUpon>Umenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLogin.resx">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="YearOrMonth.resx">
       <DependentUpon>YearOrMonth.cs</DependentUpon>
     </EmbeddedResource>

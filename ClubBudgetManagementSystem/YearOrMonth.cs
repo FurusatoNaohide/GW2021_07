@@ -14,6 +14,7 @@ namespace ClubBudgetManagementSystem
     {
         private string _year;
         private int _month;
+        public DateTime nendo;
         System.Globalization.CultureInfo ci = new System.Globalization.CultureInfo("ja-JP");
 
         public YearOrMonth()
@@ -37,7 +38,8 @@ namespace ClubBudgetManagementSystem
 
             var now = DateTime.Now;
             ci.DateTimeFormat.Calendar = new System.Globalization.JapaneseCalendar();
-            _year = now.ToString("gg y年", ci);
+            nendo = now.AddMonths(-3);
+            _year = nendo.ToString("gg y年", ci);
 
             foreach (var item in infosys202107DataSet.Manages)
             {
@@ -47,12 +49,13 @@ namespace ClubBudgetManagementSystem
             cbYear.Text = _year;
         }
 
-        //Managesにある提出日から粘土を検出
+        //Managesにある提出日から年度を検出
         private void setCbYear(DateTime presentedDate)
         {
-            if (!cbYear.Items.Contains(presentedDate.ToString("gg y年",ci)))
+            nendo = presentedDate.AddMonths(-3);
+            if (!cbYear.Items.Contains(nendo.ToString("gg y年",ci)))
             {
-                cbYear.Items.Add(presentedDate.ToString("gg y年", ci));
+                cbYear.Items.Add(nendo.ToString("gg y年", ci));
             }
         }
 

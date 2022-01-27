@@ -34,6 +34,9 @@ namespace ClubBudgetManagementSystem
             this.managesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.managesTableAdapter = new ClubBudgetManagementSystem.infosys202107DataSetTableAdapters.ManagesTableAdapter();
             this.tableAdapterManager = new ClubBudgetManagementSystem.infosys202107DataSetTableAdapters.TableAdapterManager();
+            this.clubTableAdapter = new ClubBudgetManagementSystem.infosys202107DataSetTableAdapters.ClubTableAdapter();
+            this.costTableAdapter = new ClubBudgetManagementSystem.infosys202107DataSetTableAdapters.CostTableAdapter();
+            this.presentersTableAdapter = new ClubBudgetManagementSystem.infosys202107DataSetTableAdapters.PresentersTableAdapter();
             this.managesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,11 +58,8 @@ namespace ClubBudgetManagementSystem
             this.lbCostTotal = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.presentersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.presentersTableAdapter = new ClubBudgetManagementSystem.infosys202107DataSetTableAdapters.PresentersTableAdapter();
             this.costBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.costTableAdapter = new ClubBudgetManagementSystem.infosys202107DataSetTableAdapters.CostTableAdapter();
             this.clubBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clubTableAdapter = new ClubBudgetManagementSystem.infosys202107DataSetTableAdapters.ClubTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.infosys202107DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.managesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.managesDataGridView)).BeginInit();
@@ -91,6 +91,18 @@ namespace ClubBudgetManagementSystem
             this.tableAdapterManager.PresentersTableAdapter = this.presentersTableAdapter;
             this.tableAdapterManager.UpdateOrder = ClubBudgetManagementSystem.infosys202107DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // clubTableAdapter
+            // 
+            this.clubTableAdapter.ClearBeforeFill = true;
+            // 
+            // costTableAdapter
+            // 
+            this.costTableAdapter.ClearBeforeFill = true;
+            // 
+            // presentersTableAdapter
+            // 
+            this.presentersTableAdapter.ClearBeforeFill = true;
+            // 
             // managesDataGridView
             // 
             this.managesDataGridView.AllowUserToAddRows = false;
@@ -114,7 +126,9 @@ namespace ClubBudgetManagementSystem
             this.managesDataGridView.Location = new System.Drawing.Point(12, 112);
             this.managesDataGridView.MultiSelect = false;
             this.managesDataGridView.Name = "managesDataGridView";
+            this.managesDataGridView.ReadOnly = true;
             this.managesDataGridView.RowTemplate.Height = 21;
+            this.managesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.managesDataGridView.Size = new System.Drawing.Size(444, 483);
             this.managesDataGridView.TabIndex = 1;
             this.managesDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.managesDataGridView_DataError);
@@ -132,72 +146,84 @@ namespace ClubBudgetManagementSystem
             this.dataGridViewTextBoxColumn2.DataPropertyName = "PresentedDate";
             this.dataGridViewTextBoxColumn2.HeaderText = "PresentedDate";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "UsedDate";
             this.dataGridViewTextBoxColumn3.HeaderText = "UsedDate";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Presenter_Id";
             this.dataGridViewTextBoxColumn4.HeaderText = "Presenter_Id";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Cost_Id";
             this.dataGridViewTextBoxColumn5.HeaderText = "Cost_Id";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Money";
             this.dataGridViewTextBoxColumn6.HeaderText = "Money";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "Summary";
             this.dataGridViewTextBoxColumn7.HeaderText = "Summary";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.DataPropertyName = "Receipt";
             this.dataGridViewImageColumn1.HeaderText = "Receipt";
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Confirmation";
             this.dataGridViewTextBoxColumn8.HeaderText = "Confirmation";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Remarks";
             this.dataGridViewTextBoxColumn9.HeaderText = "Remarks";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "Club_Id";
             this.dataGridViewTextBoxColumn10.HeaderText = "Club_Id";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "Pyear";
             this.dataGridViewTextBoxColumn11.HeaderText = "Pyear";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.DataPropertyName = "Pmonth";
             this.dataGridViewTextBoxColumn12.HeaderText = "Pmonth";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
             // 
             // lbYearOrMonth
             // 
@@ -260,27 +286,15 @@ namespace ClubBudgetManagementSystem
             this.presentersBindingSource.DataMember = "Presenters";
             this.presentersBindingSource.DataSource = this.infosys202107DataSet;
             // 
-            // presentersTableAdapter
-            // 
-            this.presentersTableAdapter.ClearBeforeFill = true;
-            // 
             // costBindingSource
             // 
             this.costBindingSource.DataMember = "Cost";
             this.costBindingSource.DataSource = this.infosys202107DataSet;
             // 
-            // costTableAdapter
-            // 
-            this.costTableAdapter.ClearBeforeFill = true;
-            // 
             // clubBindingSource
             // 
             this.clubBindingSource.DataMember = "Club";
             this.clubBindingSource.DataSource = this.infosys202107DataSet;
-            // 
-            // clubTableAdapter
-            // 
-            this.clubTableAdapter.ClearBeforeFill = true;
             // 
             // ClubBudgetManage
             // 

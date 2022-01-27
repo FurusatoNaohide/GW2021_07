@@ -41,7 +41,8 @@ namespace ClubBudgetManagementSystem
         //部費決算報告書画面に移動
         private void btManage_Click(object sender, EventArgs e)
         {
-
+            YearOrMonth yom = new YearOrMonth();
+            yom.ShowDialog();
         }
     }
 }

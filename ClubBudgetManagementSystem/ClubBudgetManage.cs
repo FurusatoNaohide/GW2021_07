@@ -13,7 +13,7 @@ namespace ClubBudgetManagementSystem
     public partial class ClubBudgetManage : Form
     {
         private string _year;
-        private string _month;
+        private int _month;
 
         private DateTime _PresentedDate;
         private DateTime _UsedDate;
@@ -22,6 +22,8 @@ namespace ClubBudgetManagementSystem
         private double _Money;
         private string _Summary;
         private Image _Recipt;
+        private string _Confimation;
+        private string _Remarks;
 
         //まずは範囲情報で全部活該当データを抽出
         public ClubBudgetManage(string year,int month)
@@ -30,11 +32,11 @@ namespace ClubBudgetManagementSystem
             _year = year;
             if (month != 0)
             {
-                _month = month + "月";
+                _month = month;
             }
             else
             {
-                _month = null;
+                _month = -1;
             }
         }
 
@@ -64,7 +66,17 @@ namespace ClubBudgetManagementSystem
             }
 
             //年度表示
-            lbYearOrMonth.Text = _year + _month;
+            if (_month != -1)
+            {
+                //月別
+                lbYearOrMonth.Text = _year+"度" + _month + "月";
+            }
+            else
+            {
+                //年度別
+                lbYearOrMonth.Text = _year+"度";
+            }
+            
 
             //範囲抽出
 
@@ -79,6 +91,8 @@ namespace ClubBudgetManagementSystem
             managesDataGridView.Columns[8].HeaderText = "確認欄";
             managesDataGridView.Columns[9].HeaderText = "備考欄";
             managesDataGridView.Columns[10].Visible = false;
+            managesDataGridView.Columns[11].Visible = false;
+            managesDataGridView.Columns[12].Visible = false;
 
         }
 
@@ -104,14 +118,34 @@ namespace ClubBudgetManagementSystem
                 _Money = double.Parse(managesDataGridView.CurrentRow.Cells[5].Value.ToString());
                 _Summary = managesDataGridView.CurrentRow.Cells[6].Value.ToString();
                 _Recipt = ByteArrayToImage((byte[])managesDataGridView.CurrentRow.Cells[7].Value);
-
+                _Confimation = managesDataGridView.CurrentRow.Cells[8].Value.ToString();
+                _Remarks = managesDataGridView.CurrentRow.Cells[9].Value.ToString();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
 
+            using (ClubBudgetConfirm cbconfirm = new ClubBudgetConfirm())
+            {
+                //プロパティに値を設定し、詳細画面を開く
+                cbconfirm.PresentedDate = this._PresentedDate;
+                cbconfirm.UsedDate = this._UsedDate;
+                cbconfirm.Presenter = this._Presenter;
+                cbconfirm.CostName = this._CostName;
+                cbconfirm.Money = this._Money;
+                cbconfirm.Summary = this._Summary;
+                cbconfirm.Recipt = this._Recipt;
+                cbconfirm.Confimation = this._Confimation;
+                cbconfirm.Remarks = this._Remarks;
 
+                cbconfirm.ShowDialog(this);
+                //詳細画面で設定されたプロパティから値を反映する
+                this.managesDataGridView.CurrentRow.Cells[8].Value = cbconfirm.Confimation; //確認欄
+                this.managesDataGridView.CurrentRow.Cells[9].Value = cbconfirm.Remarks;
+
+                managesBindingNavigatorSaveItem_Click(sender,e);
+            }
         }
 
         //バイト配列をImageオブジェクトに変換
@@ -165,15 +199,15 @@ namespace ClubBudgetManagementSystem
             this.clubTableAdapter.FillByNameForId(this.infosys202107DataSet.Club, cbClub.Text);
             var club_id = infosys202107DataSet.Club.FirstOrDefault().Id;
             //部活IDと一緒に年度又は年度と月を条件に抽出する
-            if (_month != null)
+            if (_month != -1)
             {
-                //年度別
-                this.managesTableAdapter.FillByDataYear(this.infosys202107DataSet.Manages, club_id, _year);
+                //月別
+                this.managesTableAdapter.FillByDataMonth(this.infosys202107DataSet.Manages, club_id, _year, _month.ToString());
             }
             else
             {
-                //月別
-                this.managesTableAdapter.FillByDataMonth(this.infosys202107DataSet.Manages, club_id, _year, _month);
+                //年度別
+                this.managesTableAdapter.FillByDataYear(this.infosys202107DataSet.Manages, club_id, _year);
             }
 
             foreach (DataGridViewRow dr in managesDataGridView.Rows)
