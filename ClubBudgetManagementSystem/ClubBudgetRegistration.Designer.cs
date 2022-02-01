@@ -68,10 +68,8 @@ namespace ClubBudgetManagementSystem
             this.presentersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.costBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clubBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btAdd = new System.Windows.Forms.Button();
             this.dtpPresenDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.btCheck = new System.Windows.Forms.Button();
             this.btDelete = new System.Windows.Forms.Button();
             this.btUpdate = new System.Windows.Forms.Button();
             this.btRegister = new System.Windows.Forms.Button();
@@ -92,6 +90,8 @@ namespace ClubBudgetManagementSystem
             this.lbClubName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ofdPictureOpen = new System.Windows.Forms.OpenFileDialog();
+            this.lbNowYear = new System.Windows.Forms.Label();
+            this.lbNowMonth = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.infosys202107DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.managesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.managesBindingNavigator)).BeginInit();
@@ -283,16 +283,17 @@ namespace ClubBudgetManagementSystem
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12});
             this.managesDataGridView.DataSource = this.managesBindingSource;
-            this.managesDataGridView.Location = new System.Drawing.Point(61, 451);
+            this.managesDataGridView.Location = new System.Drawing.Point(68, 483);
             this.managesDataGridView.MultiSelect = false;
             this.managesDataGridView.Name = "managesDataGridView";
             this.managesDataGridView.ReadOnly = true;
             this.managesDataGridView.RowTemplate.Height = 21;
             this.managesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.managesDataGridView.Size = new System.Drawing.Size(446, 220);
+            this.managesDataGridView.Size = new System.Drawing.Size(444, 253);
             this.managesDataGridView.TabIndex = 1;
             this.managesDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.managesDataGridView_DataError);
             this.managesDataGridView.SelectionChanged += new System.EventHandler(this.managesDataGridView_SelectionChanged);
+            this.managesDataGridView.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.managesDataGridView_UserDeletingRow);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -306,72 +307,84 @@ namespace ClubBudgetManagementSystem
             this.dataGridViewTextBoxColumn2.DataPropertyName = "PresentedDate";
             this.dataGridViewTextBoxColumn2.HeaderText = "PresentedDate";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "UsedDate";
             this.dataGridViewTextBoxColumn3.HeaderText = "UsedDate";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Presenter_Id";
             this.dataGridViewTextBoxColumn4.HeaderText = "Presenter_Id";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Cost_Id";
             this.dataGridViewTextBoxColumn5.HeaderText = "Cost_Id";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Money";
             this.dataGridViewTextBoxColumn6.HeaderText = "Money";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "Summary";
             this.dataGridViewTextBoxColumn7.HeaderText = "Summary";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.DataPropertyName = "Receipt";
             this.dataGridViewImageColumn1.HeaderText = "Receipt";
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Confirmation";
             this.dataGridViewTextBoxColumn8.HeaderText = "Confirmation";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Remarks";
             this.dataGridViewTextBoxColumn9.HeaderText = "Remarks";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "Club_Id";
             this.dataGridViewTextBoxColumn10.HeaderText = "Club_Id";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "Pyear";
             this.dataGridViewTextBoxColumn11.HeaderText = "Pyear";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.DataPropertyName = "Pmonth";
             this.dataGridViewTextBoxColumn12.HeaderText = "Pmonth";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
             // 
             // presentersBindingSource
             // 
@@ -388,19 +401,9 @@ namespace ClubBudgetManagementSystem
             this.clubBindingSource.DataMember = "Club";
             this.clubBindingSource.DataSource = this.infosys202107DataSet;
             // 
-            // btAdd
-            // 
-            this.btAdd.Location = new System.Drawing.Point(27, 346);
-            this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(68, 34);
-            this.btAdd.TabIndex = 49;
-            this.btAdd.Text = "新規追加";
-            this.btAdd.UseVisualStyleBackColor = true;
-            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
-            // 
             // dtpPresenDate
             // 
-            this.dtpPresenDate.Location = new System.Drawing.Point(147, 88);
+            this.dtpPresenDate.Location = new System.Drawing.Point(158, 113);
             this.dtpPresenDate.Name = "dtpPresenDate";
             this.dtpPresenDate.Size = new System.Drawing.Size(121, 19);
             this.dtpPresenDate.TabIndex = 48;
@@ -408,27 +411,17 @@ namespace ClubBudgetManagementSystem
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("HGS教科書体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(20, 87);
+            this.label2.Location = new System.Drawing.Point(31, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 23);
             this.label2.TabIndex = 47;
             this.label2.Text = "提出日(必須)：";
             // 
-            // btCheck
-            // 
-            this.btCheck.Location = new System.Drawing.Point(147, 393);
-            this.btCheck.Name = "btCheck";
-            this.btCheck.Size = new System.Drawing.Size(96, 34);
-            this.btCheck.TabIndex = 46;
-            this.btCheck.Text = "確認";
-            this.btCheck.UseVisualStyleBackColor = true;
-            this.btCheck.Click += new System.EventHandler(this.btCheck_Click);
-            // 
             // btDelete
             // 
-            this.btDelete.Location = new System.Drawing.Point(27, 393);
+            this.btDelete.Location = new System.Drawing.Point(208, 386);
             this.btDelete.Name = "btDelete";
-            this.btDelete.Size = new System.Drawing.Size(102, 34);
+            this.btDelete.Size = new System.Drawing.Size(71, 42);
             this.btDelete.TabIndex = 45;
             this.btDelete.Text = "削除";
             this.btDelete.UseVisualStyleBackColor = true;
@@ -436,9 +429,9 @@ namespace ClubBudgetManagementSystem
             // 
             // btUpdate
             // 
-            this.btUpdate.Location = new System.Drawing.Point(175, 346);
+            this.btUpdate.Location = new System.Drawing.Point(100, 386);
             this.btUpdate.Name = "btUpdate";
-            this.btUpdate.Size = new System.Drawing.Size(68, 34);
+            this.btUpdate.Size = new System.Drawing.Size(68, 42);
             this.btUpdate.TabIndex = 44;
             this.btUpdate.Text = "更新";
             this.btUpdate.UseVisualStyleBackColor = true;
@@ -446,9 +439,9 @@ namespace ClubBudgetManagementSystem
             // 
             // btRegister
             // 
-            this.btRegister.Location = new System.Drawing.Point(101, 346);
+            this.btRegister.Location = new System.Drawing.Point(23, 386);
             this.btRegister.Name = "btRegister";
-            this.btRegister.Size = new System.Drawing.Size(68, 34);
+            this.btRegister.Size = new System.Drawing.Size(71, 42);
             this.btRegister.TabIndex = 43;
             this.btRegister.Text = "登録";
             this.btRegister.UseVisualStyleBackColor = true;
@@ -456,16 +449,16 @@ namespace ClubBudgetManagementSystem
             // 
             // tbSummary
             // 
-            this.tbSummary.Location = new System.Drawing.Point(147, 272);
+            this.tbSummary.Location = new System.Drawing.Point(158, 297);
             this.tbSummary.Multiline = true;
             this.tbSummary.Name = "tbSummary";
-            this.tbSummary.Size = new System.Drawing.Size(121, 52);
+            this.tbSummary.Size = new System.Drawing.Size(121, 83);
             this.tbSummary.TabIndex = 42;
             // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("HGS教科書体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label8.Location = new System.Drawing.Point(40, 271);
+            this.label8.Location = new System.Drawing.Point(51, 296);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(101, 23);
             this.label8.TabIndex = 41;
@@ -505,14 +498,14 @@ namespace ClubBudgetManagementSystem
             this.pbReceipt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbReceipt.Location = new System.Drawing.Point(297, 113);
             this.pbReceipt.Name = "pbReceipt";
-            this.pbReceipt.Size = new System.Drawing.Size(244, 314);
+            this.pbReceipt.Size = new System.Drawing.Size(244, 315);
             this.pbReceipt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbReceipt.TabIndex = 37;
             this.pbReceipt.TabStop = false;
             // 
             // tbMoney
             // 
-            this.tbMoney.Location = new System.Drawing.Point(147, 240);
+            this.tbMoney.Location = new System.Drawing.Point(158, 265);
             this.tbMoney.Name = "tbMoney";
             this.tbMoney.Size = new System.Drawing.Size(121, 19);
             this.tbMoney.TabIndex = 36;
@@ -520,14 +513,14 @@ namespace ClubBudgetManagementSystem
             // cbPresenter
             // 
             this.cbPresenter.FormattingEnabled = true;
-            this.cbPresenter.Location = new System.Drawing.Point(147, 163);
+            this.cbPresenter.Location = new System.Drawing.Point(158, 188);
             this.cbPresenter.Name = "cbPresenter";
             this.cbPresenter.Size = new System.Drawing.Size(121, 20);
             this.cbPresenter.TabIndex = 35;
             // 
             // dtpUsedDate
             // 
-            this.dtpUsedDate.Location = new System.Drawing.Point(147, 125);
+            this.dtpUsedDate.Location = new System.Drawing.Point(158, 150);
             this.dtpUsedDate.Name = "dtpUsedDate";
             this.dtpUsedDate.Size = new System.Drawing.Size(121, 19);
             this.dtpUsedDate.TabIndex = 34;
@@ -535,7 +528,7 @@ namespace ClubBudgetManagementSystem
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("HGS教科書体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.Location = new System.Drawing.Point(20, 125);
+            this.label6.Location = new System.Drawing.Point(31, 150);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(116, 23);
             this.label6.TabIndex = 33;
@@ -544,7 +537,7 @@ namespace ClubBudgetManagementSystem
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("HGS教科書体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label5.Location = new System.Drawing.Point(6, 162);
+            this.label5.Location = new System.Drawing.Point(17, 187);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(130, 23);
             this.label5.TabIndex = 32;
@@ -553,7 +546,7 @@ namespace ClubBudgetManagementSystem
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("HGS教科書体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.Location = new System.Drawing.Point(6, 236);
+            this.label4.Location = new System.Drawing.Point(17, 261);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(135, 23);
             this.label4.TabIndex = 31;
@@ -562,7 +555,7 @@ namespace ClubBudgetManagementSystem
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("HGS教科書体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.Location = new System.Drawing.Point(20, 196);
+            this.label3.Location = new System.Drawing.Point(31, 221);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 23);
             this.label3.TabIndex = 30;
@@ -571,7 +564,7 @@ namespace ClubBudgetManagementSystem
             // cbCostName
             // 
             this.cbCostName.FormattingEnabled = true;
-            this.cbCostName.Location = new System.Drawing.Point(147, 199);
+            this.cbCostName.Location = new System.Drawing.Point(158, 224);
             this.cbCostName.Name = "cbCostName";
             this.cbCostName.Size = new System.Drawing.Size(121, 20);
             this.cbCostName.TabIndex = 29;
@@ -598,15 +591,34 @@ namespace ClubBudgetManagementSystem
             // 
             this.ofdPictureOpen.FileName = "ofdPictureOpen";
             // 
+            // lbNowYear
+            // 
+            this.lbNowYear.Font = new System.Drawing.Font("HGS教科書体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbNowYear.Location = new System.Drawing.Point(12, 457);
+            this.lbNowYear.Name = "lbNowYear";
+            this.lbNowYear.Size = new System.Drawing.Size(134, 23);
+            this.lbNowYear.TabIndex = 49;
+            this.lbNowYear.Text = "令和■■年度";
+            this.lbNowYear.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lbNowMonth
+            // 
+            this.lbNowMonth.Font = new System.Drawing.Font("HGS教科書体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbNowMonth.Location = new System.Drawing.Point(152, 457);
+            this.lbNowMonth.Name = "lbNowMonth";
+            this.lbNowMonth.Size = new System.Drawing.Size(92, 23);
+            this.lbNowMonth.TabIndex = 50;
+            this.lbNowMonth.Text = "～～月";
+            // 
             // ClubBudgetRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 683);
-            this.Controls.Add(this.btAdd);
+            this.ClientSize = new System.Drawing.Size(567, 748);
+            this.Controls.Add(this.lbNowMonth);
+            this.Controls.Add(this.lbNowYear);
             this.Controls.Add(this.dtpPresenDate);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btCheck);
             this.Controls.Add(this.btDelete);
             this.Controls.Add(this.btUpdate);
             this.Controls.Add(this.btRegister);
@@ -685,10 +697,8 @@ namespace ClubBudgetManagementSystem
         private System.Windows.Forms.BindingSource costBindingSource;
         private infosys202107DataSetTableAdapters.ClubTableAdapter clubTableAdapter;
         private System.Windows.Forms.BindingSource clubBindingSource;
-        private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.DateTimePicker dtpPresenDate;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btCheck;
         private System.Windows.Forms.Button btDelete;
         private System.Windows.Forms.Button btUpdate;
         private System.Windows.Forms.Button btRegister;
@@ -709,5 +719,7 @@ namespace ClubBudgetManagementSystem
         private System.Windows.Forms.Label lbClubName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog ofdPictureOpen;
+        private System.Windows.Forms.Label lbNowYear;
+        private System.Windows.Forms.Label lbNowMonth;
     }
 }

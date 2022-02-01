@@ -34,6 +34,14 @@ namespace ClubBudgetManagementSystem
 
         private void ClubBudgetRegistration_Load(object sender, EventArgs e)
         {
+            #region
+            DateTime now = DateTime.Now;
+            DateTime nNendo = now.AddMonths(-3);
+            ci.DateTimeFormat.Calendar = new System.Globalization.JapaneseCalendar();
+            string nyear = nNendo.ToString("gg y年", ci);
+            string nmonth = now.ToString("MMM", ci);
+            #endregion
+
             // TODO: このコード行はデータを 'infosys202107DataSet.Club' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.clubTableAdapter.Fill(this.infosys202107DataSet.Club);
             // TODO: このコード行はデータを 'infosys202107DataSet.Cost' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
@@ -41,11 +49,14 @@ namespace ClubBudgetManagementSystem
             // TODO: このコード行はデータを 'infosys202107DataSet.Presenters' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.presentersTableAdapter.Fill(this.infosys202107DataSet.Presenters);
             // TODO: このコード行はデータを 'infosys202107DataSet.Manages' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.managesTableAdapter.FillByClub(this.infosys202107DataSet.Manages,_clubId);
-
-            lbClubName.Text = this.infosys202107DataSet.Club[_index].Name;
+            //this.managesTableAdapter.FillByClub(this.infosys202107DataSet.Manages,_clubId);
+            this.managesTableAdapter.FillByDataMonth(this.infosys202107DataSet.Manages, _clubId, nyear, nmonth);
 
             #region
+            lbClubName.Text = this.infosys202107DataSet.Club[_index].Name;
+            lbNowYear.Text = nyear + "度";
+            lbNowMonth.Text = nmonth + "月";
+
             managesDataGridView.Columns[0].Visible = false;      //Id　主キー
             managesDataGridView.Columns[1].HeaderText = "提出日";
             managesDataGridView.Columns[2].Visible = false;      //部費使用日
@@ -90,7 +101,7 @@ namespace ClubBudgetManagementSystem
             }
         }
 
-        private void btAdd_Click(object sender, EventArgs e)
+        private void DataAddNew()
         {
             #region
             try
@@ -98,17 +109,25 @@ namespace ClubBudgetManagementSystem
                 this.managesBindingSource.AddNew();
                 this.managesDataGridView.DataSource = this.managesBindingSource;
             }
-            catch (ArgumentException ax)
+            catch (NoNullAllowedException )
             {
-                MessageBox.Show(ax.Message);
+                //二回目以降は追加されない
+            }
+            catch (InvalidOperationException ioe)
+            {
+                MessageBox.Show(ioe.Message);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
 
-            //初期化
+            #endregion
+        }
+
+        //初期化
+        private void Initialize()
+        {
             dtpPresenDate.Value = DateTime.Today;
             dtpUsedDate.Value = DateTime.Today;
             cbPresenter.Text = "";
@@ -116,11 +135,11 @@ namespace ClubBudgetManagementSystem
             tbMoney.Text = "";
             tbSummary.Text = "";
             pbReceipt.Image = null;
-            #endregion
         }
 
         private void btRegister_Click(object sender, EventArgs e)
         {
+            DataAddNew();
             ci.DateTimeFormat.Calendar = new System.Globalization.JapaneseCalendar();
             try
             {
@@ -129,7 +148,7 @@ namespace ClubBudgetManagementSystem
                 //提出者、費用名は外部キーを登録
                 managesDataGridView.CurrentRow.Cells[3].Value = Presenter_Refer(cbPresenter.Text);
                 managesDataGridView.CurrentRow.Cells[4].Value = Cost_Refer(cbCostName.Text);
-                managesDataGridView.CurrentRow.Cells[5].Value = tbMoney.Text;
+                managesDataGridView.CurrentRow.Cells[5].Value = int.Parse(tbMoney.Text);
                 managesDataGridView.CurrentRow.Cells[6].Value = tbSummary.Text;
                 managesDataGridView.CurrentRow.Cells[7].Value = pbReceipt.Image;
                 managesDataGridView.CurrentRow.Cells[10].Value = _clubId;
@@ -145,13 +164,16 @@ namespace ClubBudgetManagementSystem
             }
             catch (InvalidOperationException)
             {
-                MessageBox.Show("提出者名か費用名が空白になっています。");
+                MessageBox.Show("提出者名か費用名が空白になっているか、登録されていません。\r\nもう一度確認するか、登録してください。");
+            }catch(FormatException)
+            {
+                MessageBox.Show("必須事項をすべて入力してください。");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         private object Cost_Refer(string costname)
@@ -221,15 +243,16 @@ namespace ClubBudgetManagementSystem
             btRegister_Click(sender, e);
         }
 
+        //削除ボタン
         private void btDelete_Click(object sender, EventArgs e)
         {
-
-        }
-
-        //確認ボタンは必要？
-        private void btCheck_Click(object sender, EventArgs e)
-        {
-
+            foreach (DataGridViewRow item in managesDataGridView.SelectedRows)
+            {
+                if (!item.IsNewRow)
+                {
+                    managesDataGridView.Rows.Remove(item);
+                }
+            }
         }
 
         private void btReceiptOpen_Click(object sender, EventArgs e)
@@ -318,6 +341,14 @@ namespace ClubBudgetManagementSystem
         private void managesDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
 
+        }
+
+        private void managesDataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            if (MessageBox.Show("実行しますか？", "行の削除", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                e.Cancel = true; //削除をキャンセル
+            }
         }
     }
 }

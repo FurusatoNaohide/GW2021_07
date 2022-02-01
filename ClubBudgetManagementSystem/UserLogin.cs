@@ -39,9 +39,9 @@ namespace ClubBudgetManagementSystem
                     }
                     if (clubId != -1)
                     {
-                        this.Hide();
                         ClubBudgetRegistration registration = new ClubBudgetRegistration(clubId, index);
                         registration.ShowDialog();
+                        this.Close();
                     }
 
                 }

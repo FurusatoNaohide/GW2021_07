@@ -33,8 +33,13 @@ namespace ClubBudgetManagementSystem
 
         private void btApproval_Click(object sender, EventArgs e)
         {
-            confirmation = "承";
-            change_decision();
+            DialogResult dr = MessageBox.Show("個の部費情報を承認します。よろしいですか？", "部費の承認", MessageBoxButtons.OKCancel);
+            if (dr == System.Windows.Forms.DialogResult.OK)
+            {
+                confirmation = "承";
+                change_decision();
+            }
+            
         }
 
         private void btAgain_Click(object sender, EventArgs e)
