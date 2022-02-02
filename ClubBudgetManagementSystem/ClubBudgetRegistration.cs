@@ -19,11 +19,13 @@ namespace ClubBudgetManagementSystem
 
         public ClubBudgetRegistration(int clubId,int index)
         {
+            //前フォームから部活動のIDとインデックスをもらう
             InitializeComponent();
             _clubId = clubId;
             _index = index;
         }
 
+        //保存
         private void managesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -49,8 +51,10 @@ namespace ClubBudgetManagementSystem
             // TODO: このコード行はデータを 'infosys202107DataSet.Presenters' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.presentersTableAdapter.Fill(this.infosys202107DataSet.Presenters);
             // TODO: このコード行はデータを 'infosys202107DataSet.Manages' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            //this.managesTableAdapter.FillByClub(this.infosys202107DataSet.Manages,_clubId);
-            this.managesTableAdapter.FillByDataMonth(this.infosys202107DataSet.Manages, _clubId, nyear, nmonth);
+            //全ての部活ごとの情報抽出
+            this.managesTableAdapter.FillByClub(this.infosys202107DataSet.Manages,_clubId);
+            //今年度今月の部活ごとの情報抽出
+            //this.managesTableAdapter.FillByDataMonth(this.infosys202107DataSet.Manages, _clubId, nyear, nmonth);
 
             #region
             lbClubName.Text = this.infosys202107DataSet.Club[_index].Name;
@@ -83,6 +87,8 @@ namespace ClubBudgetManagementSystem
             {
                 setCbCost(item.Name);
             }
+
+            //RaiseAgainCheck();
         }
 
         private void setCbCost(string name)
@@ -101,9 +107,31 @@ namespace ClubBudgetManagementSystem
             }
         }
 
+#if false//再提出対象の情報があるか調べる
+        private void RaiseAgainCheck()
+        {
+            foreach (var item in this.infosys202107DataSet.Manages)
+            {
+                //DBNull StrongTypingExceptionをなおす
+                //if ()
+                //{
+                if (item.Confirmation.Contains("再"))
+                    {
+                        lbAttention.Text = "再提出を求められた部費情報があります。修正して更新しなおしてください。";
+                        //MessageBox.Show("再提出を求められた部費情報があります。\r\n修正して更新しなおしてください。");
+                        break;
+                    }
+                //}
+                
+            }
+
+        }
+#endif
+
+        //新規追加
         private void DataAddNew()
         {
-            #region
+#region
             try
             {
                 this.managesBindingSource.AddNew();
@@ -122,7 +150,7 @@ namespace ClubBudgetManagementSystem
                 MessageBox.Show(ex.Message);
             }
 
-            #endregion
+#endregion
         }
 
         //初期化
@@ -137,9 +165,16 @@ namespace ClubBudgetManagementSystem
             pbReceipt.Image = null;
         }
 
+        //新規追加+登録ボタン
         private void btRegister_Click(object sender, EventArgs e)
         {
             DataAddNew();
+            DataRegister(sender, e);
+        }
+
+        //登録・更新
+        private void DataRegister(object sender,EventArgs e)
+        {
             ci.DateTimeFormat.Calendar = new System.Globalization.JapaneseCalendar();
             try
             {
@@ -165,7 +200,8 @@ namespace ClubBudgetManagementSystem
             catch (InvalidOperationException)
             {
                 MessageBox.Show("提出者名か費用名が空白になっているか、登録されていません。\r\nもう一度確認するか、登録してください。");
-            }catch(FormatException)
+            }
+            catch (FormatException)
             {
                 MessageBox.Show("必須事項をすべて入力してください。");
             }
@@ -173,12 +209,12 @@ namespace ClubBudgetManagementSystem
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
+        //費用名から費用IDを持ってくる
         private object Cost_Refer(string costname)
         {
-            #region
+#region
             int C_Id = 0;
             //try
             //{
@@ -200,13 +236,13 @@ namespace ClubBudgetManagementSystem
             //}
 
             return C_Id;
-            #endregion
+#endregion
         }
 
-        //提出者IDを取り出す、ない場合登録できない
+        //提出者名から提出者IDを持ってくる
         private object Presenter_Refer(string name)
         {
-            #region
+#region
             int P_Id = 0;
             //try
             //{   
@@ -233,28 +269,50 @@ namespace ClubBudgetManagementSystem
             //}
 
             return P_Id;
-            #endregion
+#endregion
         }
 
+        //更新ボタン
         private void btUpdate_Click(object sender, EventArgs e)
         {
             if (managesDataGridView.CurrentRow.Cells == null) return;
-
-            btRegister_Click(sender, e);
+            DialogResult dr = MessageBox.Show("選択された行データを更新します。よろしいですか？", "情報の更新", MessageBoxButtons.OKCancel);
+            if (dr == System.Windows.Forms.DialogResult.OK)
+            {
+                DataRegister(sender, e);
+            }
+            
         }
 
         //削除ボタン
         private void btDelete_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow item in managesDataGridView.SelectedRows)
+            
+            try
             {
-                if (!item.IsNewRow)
+                DialogResult dr = MessageBox.Show("選択された行データを削除します。よろしいですか？", "情報の削除", MessageBoxButtons.OKCancel);
+
+                if (dr == System.Windows.Forms.DialogResult.OK)
                 {
-                    managesDataGridView.Rows.Remove(item);
+                    foreach (DataGridViewRow item in managesDataGridView.SelectedRows)
+                    {
+                        if (!item.IsNewRow)
+                        {
+                            managesDataGridView.Rows.Remove(item);
+                        }
+                    }
+                    managesBindingNavigatorSaveItem_Click(sender, e);
                 }
+
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
+        //領収書の画像追加
         private void btReceiptOpen_Click(object sender, EventArgs e)
         {
             if (ofdPictureOpen.ShowDialog() == DialogResult.OK)
@@ -263,14 +321,16 @@ namespace ClubBudgetManagementSystem
             }
         }
 
+        //画像消去
         private void btReceiptDelete_Click(object sender, EventArgs e)
         {
             pbReceipt.Image = null;
         }
 
+        //選択した列の情報をフォームに表示
         private void managesDataGridView_SelectionChanged(object sender, EventArgs e)
         {
-            #region
+#region
             if (managesDataGridView.CurrentRow == null) return;
             if ((int) managesDataGridView.CurrentRow.Cells[0].Value <= -1) return;
             try
@@ -284,12 +344,35 @@ namespace ClubBudgetManagementSystem
                 tbSummary.Text = managesDataGridView.CurrentRow.Cells[6].Value.ToString();
                 pbReceipt.Image = ByteArrayToImage((byte[])managesDataGridView.CurrentRow.Cells[7].Value);
 
+                string confirm = managesDataGridView.CurrentRow.Cells[8].Value.ToString();
+                ConfirmCheck(confirm);
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            #endregion
+#endregion
+        }
+
+        //情報が承認・再提出されたかチェック
+        private void ConfirmCheck(string confirm)
+        {
+            switch (confirm)
+            {
+                case "承":
+                    btUpdate.Enabled = false;
+                    btDelete.Enabled = false;
+                    break;
+                case "再":
+                    btUpdate.Enabled = true;
+                    btDelete.Enabled = false;
+                    break;
+                default:
+                    btUpdate.Enabled = true;
+                    btDelete.Enabled = true;
+                    break;
+            }
         }
 
         //バイト配列をImageオブジェクトに変換
@@ -312,9 +395,10 @@ namespace ClubBudgetManagementSystem
             return b;
         }
 
+        //費用IDから費用名
         private string Cost_getName(string cId)
         {
-            #region
+#region
             var cdata = infosys202107DataSet.Cost.Where(x => x.Id == int.Parse(cId)).First();
             string c_Name = null;
             if (cdata != null)
@@ -322,12 +406,13 @@ namespace ClubBudgetManagementSystem
                 c_Name = cdata.Name;
             }
             return c_Name;
-            #endregion
+#endregion
         }
 
+        //提出者IDから提出者名
         private string Presenter_getName(string pId)
         {
-            #region
+#region
             var pdata = infosys202107DataSet.Presenters.Where(x => x.Id == int.Parse(pId)).First();
             string p_Name = null;
             if (pdata != null)
@@ -335,7 +420,7 @@ namespace ClubBudgetManagementSystem
                 p_Name = pdata.Name;
             }
             return p_Name;
-            #endregion
+#endregion
         }
 
         private void managesDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)

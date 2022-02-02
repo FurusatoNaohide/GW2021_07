@@ -92,6 +92,7 @@ namespace ClubBudgetManagementSystem
             this.ofdPictureOpen = new System.Windows.Forms.OpenFileDialog();
             this.lbNowYear = new System.Windows.Forms.Label();
             this.lbNowMonth = new System.Windows.Forms.Label();
+            this.lbAttention = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.infosys202107DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.managesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.managesBindingNavigator)).BeginInit();
@@ -283,7 +284,7 @@ namespace ClubBudgetManagementSystem
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12});
             this.managesDataGridView.DataSource = this.managesBindingSource;
-            this.managesDataGridView.Location = new System.Drawing.Point(68, 483);
+            this.managesDataGridView.Location = new System.Drawing.Point(54, 483);
             this.managesDataGridView.MultiSelect = false;
             this.managesDataGridView.Name = "managesDataGridView";
             this.managesDataGridView.ReadOnly = true;
@@ -610,11 +611,20 @@ namespace ClubBudgetManagementSystem
             this.lbNowMonth.TabIndex = 50;
             this.lbNowMonth.Text = "～～月";
             // 
+            // lbAttention
+            // 
+            this.lbAttention.Font = new System.Drawing.Font("HGS教科書体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbAttention.Location = new System.Drawing.Point(227, 431);
+            this.lbAttention.Name = "lbAttention";
+            this.lbAttention.Size = new System.Drawing.Size(314, 49);
+            this.lbAttention.TabIndex = 51;
+            // 
             // ClubBudgetRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(567, 748);
+            this.Controls.Add(this.lbAttention);
             this.Controls.Add(this.lbNowMonth);
             this.Controls.Add(this.lbNowYear);
             this.Controls.Add(this.dtpPresenDate);
@@ -721,5 +731,6 @@ namespace ClubBudgetManagementSystem
         private System.Windows.Forms.OpenFileDialog ofdPictureOpen;
         private System.Windows.Forms.Label lbNowYear;
         private System.Windows.Forms.Label lbNowMonth;
+        private System.Windows.Forms.Label lbAttention;
     }
 }
