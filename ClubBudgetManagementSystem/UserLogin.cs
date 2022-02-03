@@ -28,14 +28,15 @@ namespace ClubBudgetManagementSystem
                 if (data == 1)
                 {
                     //部活の主キー番号を記憶させて別フォームに持っていきたい
+                    
                     foreach (var club in infosys202107DataSet.Club)
                     {
                         if (club.Club_No == int.Parse(tbClubID.Text))
                         {
                             clubId = club.Id;
+                            index = infosys202107DataSet.Club.Rows.IndexOf(club);
                             break;
                         }
-                        index++;
                     }
                     if (clubId != -1)
                     {
@@ -47,7 +48,6 @@ namespace ClubBudgetManagementSystem
                 }
                 else
                 {
-                    tbClubID.Text = null;
                     tbPassWord.Text = null;
                     MessageBox.Show("部活IDとパスワードが一致しませんでした。");
                 }
@@ -75,6 +75,10 @@ namespace ClubBudgetManagementSystem
         {
             // TODO: このコード行はデータを 'infosys202107DataSet.Club' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.clubTableAdapter.Fill(this.infosys202107DataSet.Club);
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
 
         }
     }

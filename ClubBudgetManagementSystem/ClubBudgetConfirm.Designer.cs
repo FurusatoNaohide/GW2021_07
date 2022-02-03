@@ -46,25 +46,26 @@ namespace ClubBudgetManagementSystem
             this.lbName = new System.Windows.Forms.Label();
             this.lbPDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbAttention = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbReceipt)).BeginInit();
             this.SuspendLayout();
             // 
             // label12
             // 
-            this.label12.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label12.Location = new System.Drawing.Point(310, 72);
+            this.label12.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label12.Location = new System.Drawing.Point(312, 50);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(48, 22);
+            this.label12.Size = new System.Drawing.Size(81, 27);
             this.label12.TabIndex = 31;
             this.label12.Text = "氏名：";
             // 
             // btAgain
             // 
-            this.btAgain.Location = new System.Drawing.Point(394, 403);
+            this.btAgain.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btAgain.Location = new System.Drawing.Point(443, 377);
             this.btAgain.Name = "btAgain";
-            this.btAgain.Size = new System.Drawing.Size(88, 42);
+            this.btAgain.Size = new System.Drawing.Size(101, 42);
             this.btAgain.TabIndex = 30;
             this.btAgain.Text = "再提出";
             this.btAgain.UseVisualStyleBackColor = true;
@@ -72,7 +73,8 @@ namespace ClubBudgetManagementSystem
             // 
             // btApproval
             // 
-            this.btApproval.Location = new System.Drawing.Point(291, 403);
+            this.btApproval.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btApproval.Location = new System.Drawing.Point(332, 377);
             this.btApproval.Name = "btApproval";
             this.btApproval.Size = new System.Drawing.Size(88, 42);
             this.btApproval.TabIndex = 29;
@@ -82,8 +84,8 @@ namespace ClubBudgetManagementSystem
             // 
             // lbMoney
             // 
-            this.lbMoney.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbMoney.Location = new System.Drawing.Point(70, 252);
+            this.lbMoney.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbMoney.Location = new System.Drawing.Point(87, 293);
             this.lbMoney.Name = "lbMoney";
             this.lbMoney.Size = new System.Drawing.Size(186, 26);
             this.lbMoney.TabIndex = 28;
@@ -91,17 +93,17 @@ namespace ClubBudgetManagementSystem
             // 
             // lbSummary
             // 
-            this.lbSummary.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbSummary.Location = new System.Drawing.Point(70, 163);
+            this.lbSummary.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbSummary.Location = new System.Drawing.Point(87, 167);
             this.lbSummary.Name = "lbSummary";
-            this.lbSummary.Size = new System.Drawing.Size(186, 81);
+            this.lbSummary.Size = new System.Drawing.Size(196, 121);
             this.lbSummary.TabIndex = 27;
             this.lbSummary.Text = "１.";
             // 
             // lbCost
             // 
-            this.lbCost.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbCost.Location = new System.Drawing.Point(70, 129);
+            this.lbCost.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbCost.Location = new System.Drawing.Point(87, 134);
             this.lbCost.Name = "lbCost";
             this.lbCost.Size = new System.Drawing.Size(186, 26);
             this.lbCost.TabIndex = 26;
@@ -109,8 +111,8 @@ namespace ClubBudgetManagementSystem
             // 
             // lbUsedDate
             // 
-            this.lbUsedDate.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbUsedDate.Location = new System.Drawing.Point(70, 93);
+            this.lbUsedDate.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbUsedDate.Location = new System.Drawing.Point(108, 96);
             this.lbUsedDate.Name = "lbUsedDate";
             this.lbUsedDate.Size = new System.Drawing.Size(186, 26);
             this.lbUsedDate.TabIndex = 25;
@@ -118,102 +120,104 @@ namespace ClubBudgetManagementSystem
             // 
             // tbRemarks
             // 
-            this.tbRemarks.Location = new System.Drawing.Point(70, 292);
+            this.tbRemarks.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbRemarks.Location = new System.Drawing.Point(84, 327);
             this.tbRemarks.Multiline = true;
             this.tbRemarks.Name = "tbRemarks";
-            this.tbRemarks.Size = new System.Drawing.Size(203, 153);
+            this.tbRemarks.Size = new System.Drawing.Size(210, 191);
             this.tbRemarks.TabIndex = 24;
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label7.Location = new System.Drawing.Point(16, 133);
+            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label7.Location = new System.Drawing.Point(16, 129);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 22);
+            this.label7.Size = new System.Drawing.Size(73, 26);
             this.label7.TabIndex = 23;
             this.label7.Text = "項目：";
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.Location = new System.Drawing.Point(16, 167);
+            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label6.Location = new System.Drawing.Point(16, 163);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 22);
+            this.label6.Size = new System.Drawing.Size(73, 26);
             this.label6.TabIndex = 22;
             this.label6.Text = "概要：";
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label5.Location = new System.Drawing.Point(16, 252);
+            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.Location = new System.Drawing.Point(16, 288);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 22);
+            this.label5.Size = new System.Drawing.Size(73, 36);
             this.label5.TabIndex = 21;
             this.label5.Text = "金額：";
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.Location = new System.Drawing.Point(16, 292);
+            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4.Location = new System.Drawing.Point(16, 324);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 22);
+            this.label4.Size = new System.Drawing.Size(73, 33);
             this.label4.TabIndex = 20;
             this.label4.Text = "備考：";
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.Location = new System.Drawing.Point(16, 97);
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label3.Location = new System.Drawing.Point(14, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 22);
+            this.label3.Size = new System.Drawing.Size(98, 28);
             this.label3.TabIndex = 19;
-            this.label3.Text = "日付：";
+            this.label3.Text = "使用日：";
             // 
             // pbReceipt
             // 
             this.pbReceipt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbReceipt.Location = new System.Drawing.Point(291, 97);
+            this.pbReceipt.Location = new System.Drawing.Point(310, 80);
             this.pbReceipt.Name = "pbReceipt";
-            this.pbReceipt.Size = new System.Drawing.Size(187, 277);
+            this.pbReceipt.Size = new System.Drawing.Size(244, 277);
             this.pbReceipt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbReceipt.TabIndex = 18;
             this.pbReceipt.TabStop = false;
+            this.pbReceipt.Click += new System.EventHandler(this.pbReceipt_Click);
             // 
             // lbName
             // 
-            this.lbName.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbName.Location = new System.Drawing.Point(364, 72);
+            this.lbName.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbName.Location = new System.Drawing.Point(399, 55);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(114, 22);
+            this.lbName.Size = new System.Drawing.Size(155, 22);
             this.lbName.TabIndex = 17;
             this.lbName.Text = "○○○○";
             // 
             // lbPDate
             // 
-            this.lbPDate.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbPDate.Location = new System.Drawing.Point(88, 48);
+            this.lbPDate.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbPDate.Location = new System.Drawing.Point(108, 57);
             this.lbPDate.Name = "lbPDate";
-            this.lbPDate.Size = new System.Drawing.Size(155, 26);
+            this.lbPDate.Size = new System.Drawing.Size(186, 26);
             this.lbPDate.TabIndex = 16;
             this.lbPDate.Text = "＿＿年＿月＿＿日";
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(14, 48);
+            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Location = new System.Drawing.Point(14, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 26);
+            this.label1.Size = new System.Drawing.Size(98, 26);
             this.label1.TabIndex = 32;
             this.label1.Text = "提出日：";
             // 
-            // label2
+            // lbAttention
             // 
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(16, 461);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(385, 26);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "※再提出の場合は、その理由を備考欄に記載してください。";
+            this.lbAttention.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbAttention.Location = new System.Drawing.Point(316, 431);
+            this.lbAttention.Name = "lbAttention";
+            this.lbAttention.Size = new System.Drawing.Size(238, 87);
+            this.lbAttention.TabIndex = 33;
+            this.lbAttention.Text = "※再提出の場合は、その理由を備考欄に記載してください。";
             // 
             // label8
             // 
@@ -228,9 +232,9 @@ namespace ClubBudgetManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 502);
+            this.ClientSize = new System.Drawing.Size(578, 540);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbAttention);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btAgain);
@@ -276,7 +280,7 @@ namespace ClubBudgetManagementSystem
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label lbPDate;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbAttention;
         private System.Windows.Forms.Label label8;
     }
 }

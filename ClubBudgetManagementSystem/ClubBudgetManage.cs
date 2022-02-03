@@ -56,8 +56,6 @@ namespace ClubBudgetManagementSystem
             this.costTableAdapter.Fill(this.infosys202107DataSet.Cost);
             // TODO: このコード行はデータを 'infosys202107DataSet.Presenters' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.presentersTableAdapter.Fill(this.infosys202107DataSet.Presenters);
-            
-
 
             //Clubにある部活動名をComboBoxに登録
             foreach (var item in infosys202107DataSet.Club)
@@ -66,6 +64,7 @@ namespace ClubBudgetManagementSystem
             }
 
             //年度表示
+            #region
             if (_month != -1)
             {
                 //月別
@@ -76,10 +75,10 @@ namespace ClubBudgetManagementSystem
                 //年度別
                 lbYearOrMonth.Text = _year+"度";
             }
-            
+            #endregion
 
             //範囲抽出
-
+            #region
             managesDataGridView.Columns[0].Visible = false;
             managesDataGridView.Columns[1].HeaderText = "提出日";
             managesDataGridView.Columns[2].Visible = false;
@@ -94,6 +93,12 @@ namespace ClubBudgetManagementSystem
             managesDataGridView.Columns[11].Visible = false;
             managesDataGridView.Columns[12].Visible = false;
 
+            managesDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
+            #endregion
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
 
         private void setCbClub(string name)

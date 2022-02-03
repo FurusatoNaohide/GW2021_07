@@ -55,8 +55,6 @@ namespace ClubBudgetManagementSystem
             this.tbPresenterName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btAdd = new System.Windows.Forms.Button();
-            this.btConnect = new System.Windows.Forms.Button();
             this.btCancel = new System.Windows.Forms.Button();
             this.btRegister = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.infosys202107DataSet)).BeginInit();
@@ -115,7 +113,7 @@ namespace ClubBudgetManagementSystem
             this.presentersBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.presentersBindingNavigator.Name = "presentersBindingNavigator";
             this.presentersBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.presentersBindingNavigator.Size = new System.Drawing.Size(330, 25);
+            this.presentersBindingNavigator.Size = new System.Drawing.Size(356, 25);
             this.presentersBindingNavigator.TabIndex = 0;
             this.presentersBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -223,7 +221,7 @@ namespace ClubBudgetManagementSystem
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.presentersDataGridView.DataSource = this.presentersBindingSource;
-            this.presentersDataGridView.Location = new System.Drawing.Point(17, 223);
+            this.presentersDataGridView.Location = new System.Drawing.Point(35, 223);
             this.presentersDataGridView.MultiSelect = false;
             this.presentersDataGridView.Name = "presentersDataGridView";
             this.presentersDataGridView.ReadOnly = true;
@@ -249,7 +247,7 @@ namespace ClubBudgetManagementSystem
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label6.Location = new System.Drawing.Point(12, 171);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(137, 37);
@@ -259,19 +257,19 @@ namespace ClubBudgetManagementSystem
             // tbPresenterName
             // 
             this.tbPresenterName.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbPresenterName.Location = new System.Drawing.Point(155, 101);
+            this.tbPresenterName.Location = new System.Drawing.Point(194, 105);
             this.tbPresenterName.Name = "tbPresenterName";
             this.tbPresenterName.Size = new System.Drawing.Size(156, 31);
             this.tbPresenterName.TabIndex = 17;
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(12, 102);
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Location = new System.Drawing.Point(13, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 37);
+            this.label2.Size = new System.Drawing.Size(184, 37);
             this.label2.TabIndex = 16;
-            this.label2.Text = "提出者名：";
+            this.label2.Text = "提出者名(必須)：";
             // 
             // label1
             // 
@@ -282,32 +280,10 @@ namespace ClubBudgetManagementSystem
             this.label1.TabIndex = 15;
             this.label1.Text = "提出者登録画面";
             // 
-            // btAdd
-            // 
-            this.btAdd.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btAdd.Location = new System.Drawing.Point(205, 273);
-            this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(94, 33);
-            this.btAdd.TabIndex = 23;
-            this.btAdd.Text = "追加";
-            this.btAdd.UseVisualStyleBackColor = true;
-            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
-            // 
-            // btConnect
-            // 
-            this.btConnect.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btConnect.Location = new System.Drawing.Point(205, 234);
-            this.btConnect.Name = "btConnect";
-            this.btConnect.Size = new System.Drawing.Size(94, 33);
-            this.btConnect.TabIndex = 22;
-            this.btConnect.Text = "接続";
-            this.btConnect.UseVisualStyleBackColor = true;
-            this.btConnect.Click += new System.EventHandler(this.btConnect_Click);
-            // 
             // btCancel
             // 
             this.btCancel.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btCancel.Location = new System.Drawing.Point(205, 407);
+            this.btCancel.Location = new System.Drawing.Point(226, 420);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(94, 33);
             this.btCancel.TabIndex = 21;
@@ -318,7 +294,7 @@ namespace ClubBudgetManagementSystem
             // btRegister
             // 
             this.btRegister.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btRegister.Location = new System.Drawing.Point(205, 356);
+            this.btRegister.Location = new System.Drawing.Point(226, 381);
             this.btRegister.Name = "btRegister";
             this.btRegister.Size = new System.Drawing.Size(94, 33);
             this.btRegister.TabIndex = 20;
@@ -330,9 +306,7 @@ namespace ClubBudgetManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 475);
-            this.Controls.Add(this.btAdd);
-            this.Controls.Add(this.btConnect);
+            this.ClientSize = new System.Drawing.Size(356, 475);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btRegister);
             this.Controls.Add(this.label6);
@@ -381,8 +355,6 @@ namespace ClubBudgetManagementSystem
         private System.Windows.Forms.TextBox tbPresenterName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btAdd;
-        private System.Windows.Forms.Button btConnect;
         private System.Windows.Forms.Button btCancel;
         private System.Windows.Forms.Button btRegister;
     }

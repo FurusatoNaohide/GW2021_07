@@ -93,7 +93,7 @@ namespace ClubBudgetManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 237);
+            this.ClientSize = new System.Drawing.Size(424, 233);
             this.Controls.Add(this.btPresenterRegister);
             this.Controls.Add(this.btCostNameRegister);
             this.Controls.Add(this.btClubRegister);
@@ -101,6 +101,7 @@ namespace ClubBudgetManagementSystem
             this.Controls.Add(this.label1);
             this.Name = "Mmenu";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Mmenu_Load);
             this.ResumeLayout(false);
 
         }

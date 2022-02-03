@@ -36,7 +36,7 @@ namespace ClubBudgetManagementSystem
             // btLogin
             // 
             this.btLogin.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btLogin.Location = new System.Drawing.Point(101, 143);
+            this.btLogin.Location = new System.Drawing.Point(96, 139);
             this.btLogin.Name = "btLogin";
             this.btLogin.Size = new System.Drawing.Size(225, 67);
             this.btLogin.TabIndex = 3;
@@ -62,6 +62,7 @@ namespace ClubBudgetManagementSystem
             this.Controls.Add(this.label1);
             this.Name = "Umenu";
             this.Text = "Umenu";
+            this.Load += new System.EventHandler(this.Umenu_Load);
             this.ResumeLayout(false);
 
         }

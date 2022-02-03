@@ -61,8 +61,6 @@ namespace ClubBudgetManagementSystem
             this.tbClubName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btAdd = new System.Windows.Forms.Button();
-            this.btConnect = new System.Windows.Forms.Button();
             this.btCancel = new System.Windows.Forms.Button();
             this.btRegister = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.infosys202107DataSet)).BeginInit();
@@ -121,7 +119,7 @@ namespace ClubBudgetManagementSystem
             this.clubBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.clubBindingNavigator.Name = "clubBindingNavigator";
             this.clubBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.clubBindingNavigator.Size = new System.Drawing.Size(384, 25);
+            this.clubBindingNavigator.Size = new System.Drawing.Size(417, 25);
             this.clubBindingNavigator.TabIndex = 0;
             this.clubBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -231,13 +229,13 @@ namespace ClubBudgetManagementSystem
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.clubDataGridView.DataSource = this.clubBindingSource;
-            this.clubDataGridView.Location = new System.Drawing.Point(26, 313);
+            this.clubDataGridView.Location = new System.Drawing.Point(25, 313);
             this.clubDataGridView.MultiSelect = false;
             this.clubDataGridView.Name = "clubDataGridView";
             this.clubDataGridView.ReadOnly = true;
             this.clubDataGridView.RowTemplate.Height = 21;
             this.clubDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.clubDataGridView.Size = new System.Drawing.Size(222, 220);
+            this.clubDataGridView.Size = new System.Drawing.Size(280, 220);
             this.clubDataGridView.TabIndex = 1;
             this.clubDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.clubDataGridView_DataError);
             // 
@@ -271,7 +269,7 @@ namespace ClubBudgetManagementSystem
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label6.Location = new System.Drawing.Point(21, 273);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(137, 37);
@@ -281,54 +279,54 @@ namespace ClubBudgetManagementSystem
             // tbPassWord
             // 
             this.tbPassWord.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbPassWord.Location = new System.Drawing.Point(150, 226);
+            this.tbPassWord.Location = new System.Drawing.Point(209, 226);
             this.tbPassWord.Name = "tbPassWord";
             this.tbPassWord.PasswordChar = '*';
-            this.tbPassWord.Size = new System.Drawing.Size(209, 31);
+            this.tbPassWord.Size = new System.Drawing.Size(191, 31);
             this.tbPassWord.TabIndex = 20;
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label5.Location = new System.Drawing.Point(21, 227);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 37);
+            this.label5.Size = new System.Drawing.Size(182, 37);
             this.label5.TabIndex = 19;
-            this.label5.Text = "パスワード：";
+            this.label5.Text = "パスワード(必須)：";
             // 
             // tbClubID
             // 
             this.tbClubID.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbClubID.Location = new System.Drawing.Point(150, 157);
+            this.tbClubID.Location = new System.Drawing.Point(209, 157);
             this.tbClubID.Name = "tbClubID";
-            this.tbClubID.Size = new System.Drawing.Size(209, 31);
+            this.tbClubID.Size = new System.Drawing.Size(191, 31);
             this.tbClubID.TabIndex = 18;
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.Location = new System.Drawing.Point(51, 157);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 37);
+            this.label4.Size = new System.Drawing.Size(161, 37);
             this.label4.TabIndex = 17;
-            this.label4.Text = "部活ID：";
+            this.label4.Text = "部活ID(必須)：";
             // 
             // tbClubName
             // 
             this.tbClubName.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbClubName.Location = new System.Drawing.Point(150, 94);
+            this.tbClubName.Location = new System.Drawing.Point(209, 94);
             this.tbClubName.Name = "tbClubName";
-            this.tbClubName.Size = new System.Drawing.Size(209, 31);
+            this.tbClubName.Size = new System.Drawing.Size(191, 31);
             this.tbClubName.TabIndex = 16;
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label2.Location = new System.Drawing.Point(21, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 37);
+            this.label2.Size = new System.Drawing.Size(182, 37);
             this.label2.TabIndex = 15;
-            this.label2.Text = "部活動名：";
+            this.label2.Text = "部活動名(必須)：";
             // 
             // label1
             // 
@@ -339,32 +337,10 @@ namespace ClubBudgetManagementSystem
             this.label1.TabIndex = 14;
             this.label1.Text = "部活動登録画面";
             // 
-            // btAdd
-            // 
-            this.btAdd.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btAdd.Location = new System.Drawing.Point(273, 357);
-            this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(94, 33);
-            this.btAdd.TabIndex = 25;
-            this.btAdd.Text = "追加";
-            this.btAdd.UseVisualStyleBackColor = true;
-            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
-            // 
-            // btConnect
-            // 
-            this.btConnect.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btConnect.Location = new System.Drawing.Point(273, 318);
-            this.btConnect.Name = "btConnect";
-            this.btConnect.Size = new System.Drawing.Size(94, 33);
-            this.btConnect.TabIndex = 24;
-            this.btConnect.Text = "接続";
-            this.btConnect.UseVisualStyleBackColor = true;
-            this.btConnect.Click += new System.EventHandler(this.btConnect_Click);
-            // 
             // btCancel
             // 
             this.btCancel.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btCancel.Location = new System.Drawing.Point(273, 491);
+            this.btCancel.Location = new System.Drawing.Point(311, 500);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(94, 33);
             this.btCancel.TabIndex = 23;
@@ -375,7 +351,7 @@ namespace ClubBudgetManagementSystem
             // btRegister
             // 
             this.btRegister.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btRegister.Location = new System.Drawing.Point(273, 440);
+            this.btRegister.Location = new System.Drawing.Point(311, 461);
             this.btRegister.Name = "btRegister";
             this.btRegister.Size = new System.Drawing.Size(94, 33);
             this.btRegister.TabIndex = 22;
@@ -387,9 +363,7 @@ namespace ClubBudgetManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 557);
-            this.Controls.Add(this.btAdd);
-            this.Controls.Add(this.btConnect);
+            this.ClientSize = new System.Drawing.Size(417, 557);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btRegister);
             this.Controls.Add(this.label6);
@@ -448,8 +422,6 @@ namespace ClubBudgetManagementSystem
         private System.Windows.Forms.TextBox tbClubName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btAdd;
-        private System.Windows.Forms.Button btConnect;
         private System.Windows.Forms.Button btCancel;
         private System.Windows.Forms.Button btRegister;
     }

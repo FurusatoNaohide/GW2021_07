@@ -16,7 +16,7 @@ namespace ClubBudgetManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Umenu());
+            Application.Run(new TopMenu());
         }
     }
 }

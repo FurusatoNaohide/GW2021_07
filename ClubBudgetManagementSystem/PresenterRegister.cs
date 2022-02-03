@@ -27,15 +27,19 @@ namespace ClubBudgetManagementSystem
 
         private void PresenterRegister_Load(object sender, EventArgs e)
         {
-            presentersDataGridView.Columns[0].Visible = false;
-            presentersDataGridView.Columns[1].HeaderText = "提出者名";
-        }
-
-        private void btConnect_Click(object sender, EventArgs e)
-        {
+            #region
             // TODO: このコード行はデータを 'infosys202107DataSet.Presenters' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.presentersTableAdapter.Fill(this.infosys202107DataSet.Presenters);
-            btAdd_Click(sender, e);
+
+            presentersDataGridView.Columns[0].Visible = false;
+            presentersDataGridView.Columns[1].HeaderText = "提出者名";
+
+            presentersDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
+            #endregion
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
 
         private void btAdd_Click(object sender, EventArgs e)
@@ -46,13 +50,22 @@ namespace ClubBudgetManagementSystem
 
         private void btRegister_Click(object sender, EventArgs e)
         {
-            presentersDataGridView.CurrentRow.Cells[1].Value = tbPresenterName.Text;
+            if (tbPresenterName.Text != "")
+            {
+                btAdd_Click(sender, e);
+                presentersDataGridView.CurrentRow.Cells[1].Value = tbPresenterName.Text;
 
-            this.Validate();
-            this.presentersBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.infosys202107DataSet);
+                this.Validate();
+                this.presentersBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.infosys202107DataSet);
 
-            tbPresenterName.Text = null;
+                tbPresenterName.Text = null;
+            }
+            else
+            {
+                MessageBox.Show("提出者名を入力してください。");
+            }
+            
         }
 
         private void btCancel_Click(object sender, EventArgs e)

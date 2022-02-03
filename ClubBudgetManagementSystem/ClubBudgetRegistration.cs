@@ -15,6 +15,7 @@ namespace ClubBudgetManagementSystem
         private int _clubId;
         private int _index;
         public DateTime nendo;
+        public string confirm;
         System.Globalization.CultureInfo ci = new System.Globalization.CultureInfo("ja-JP");
 
         public ClubBudgetRegistration(int clubId,int index)
@@ -52,9 +53,9 @@ namespace ClubBudgetManagementSystem
             this.presentersTableAdapter.Fill(this.infosys202107DataSet.Presenters);
             // TODO: このコード行はデータを 'infosys202107DataSet.Manages' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             //全ての部活ごとの情報抽出
-            this.managesTableAdapter.FillByClub(this.infosys202107DataSet.Manages,_clubId);
+            //this.managesTableAdapter.FillByClub(this.infosys202107DataSet.Manages,_clubId);
             //今年度今月の部活ごとの情報抽出
-            //this.managesTableAdapter.FillByDataMonth(this.infosys202107DataSet.Manages, _clubId, nyear, nmonth);
+            this.managesTableAdapter.FillByDataMonth(this.infosys202107DataSet.Manages, _clubId, nyear, nmonth);
 
             #region
             lbClubName.Text = this.infosys202107DataSet.Club[_index].Name;
@@ -75,6 +76,8 @@ namespace ClubBudgetManagementSystem
             managesDataGridView.Columns[11].Visible = false;    //年度
             managesDataGridView.Columns[12].Visible = false;    //月
 
+            managesDataGridView.Columns[9].Width = 347;
+            managesDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
             #endregion
 
             //Presentersにある提出者リストをComboBoxに登録
@@ -88,7 +91,12 @@ namespace ClubBudgetManagementSystem
                 setCbCost(item.Name);
             }
 
-            //RaiseAgainCheck();
+            lbAttention.Text = "※選択した画像をクリックすると、実際のサイズで表示されます。\r\n";
+            RaiseAgainCheck();
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
 
         private void setCbCost(string name)
@@ -107,21 +115,17 @@ namespace ClubBudgetManagementSystem
             }
         }
 
-#if false//再提出対象の情報があるか調べる
+#if true//再提出対象の情報があるか調べる
         private void RaiseAgainCheck()
         {
             foreach (var item in this.infosys202107DataSet.Manages)
             {
-                //DBNull StrongTypingExceptionをなおす
-                //if ()
-                //{
                 if (item.Confirmation.Contains("再"))
                     {
-                        lbAttention.Text = "再提出を求められた部費情報があります。修正して更新しなおしてください。";
-                        //MessageBox.Show("再提出を求められた部費情報があります。\r\n修正して更新しなおしてください。");
+                        lbAttention.Text += "※再提出を求められた部費情報があります。訂正して更新しなおしてください。";
+                        //MessageBox.Show("再提出を求められた部費情報があります。\r\n訂正して更新しなおしてください。");
                         break;
                     }
-                //}
                 
             }
 
@@ -186,12 +190,21 @@ namespace ClubBudgetManagementSystem
                 managesDataGridView.CurrentRow.Cells[5].Value = int.Parse(tbMoney.Text);
                 managesDataGridView.CurrentRow.Cells[6].Value = tbSummary.Text;
                 managesDataGridView.CurrentRow.Cells[7].Value = pbReceipt.Image;
+                if (managesDataGridView.CurrentRow.Cells[8].Value == DBNull.Value)
+                {
+                    managesDataGridView.CurrentRow.Cells[8].Value = "";
+                }else if(confirm == "再")
+                {
+                    managesDataGridView.CurrentRow.Cells[8].Value = "訂";
+                }
                 managesDataGridView.CurrentRow.Cells[10].Value = _clubId;
                 nendo = dtpPresenDate.Value.AddMonths(-3);
                 managesDataGridView.CurrentRow.Cells[11].Value = nendo.ToString("gg y年", ci);
                 managesDataGridView.CurrentRow.Cells[12].Value = dtpPresenDate.Value.ToString("MMM", ci);
 
                 managesBindingNavigatorSaveItem_Click(sender, e);
+                confirm = managesDataGridView.CurrentRow.Cells[8].Value.ToString();
+                ConfirmCheck(confirm);
             }
             catch (NoNullAllowedException)
             {
@@ -216,25 +229,18 @@ namespace ClubBudgetManagementSystem
         {
 #region
             int C_Id = 0;
-            //try
-            //{
-                var cData = infosys202107DataSet.Cost.Where(x => x.Name == costname).First();
+            var cData = infosys202107DataSet.Cost.Where(x => x.Name == costname).First();
 
-                if (cData != null)
-                {
-                    C_Id = cData.Id;
-                }
-                else
-                {
-                    cbCostName.Text = null;
-                    MessageBox.Show("この費用名は登録されていません。\r\nもう一度確認するか、登録してください。");
-                }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-
+            if (cData != null)
+            {
+                C_Id = cData.Id;
+            }
+            else
+            {
+                cbCostName.Text = null;
+                MessageBox.Show("この費用名は登録されていません。\r\nもう一度確認するか、登録してください。");
+            }
+            
             return C_Id;
 #endregion
         }
@@ -244,29 +250,18 @@ namespace ClubBudgetManagementSystem
         {
 #region
             int P_Id = 0;
-            //try
-            //{   
-                var pData = infosys202107DataSet.Presenters.Where(x => x.Name == name).First();
+            var pData = infosys202107DataSet.Presenters.Where(x => x.Name == name).First();
 
-                if (pData != null) 
-                {
-                    P_Id = pData.Id;
-                }
-                else
-                {
-                    cbPresenter.Text = null;
-                    MessageBox.Show("この名前は登録されていません。\r\nもう一度確認するか、登録してください。");
-                }
-
-            //}
-            //catch(InvalidOperationException ioe)
-            //{
-            //    MessageBox.Show(ioe.Message);
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+            if (pData != null)
+            {
+                P_Id = pData.Id;
+            }
+            else
+            {
+                cbPresenter.Text = null;
+                MessageBox.Show("この名前は登録されていません。\r\nもう一度確認するか、登録してください。");
+            }
+            
 
             return P_Id;
 #endregion
@@ -287,7 +282,18 @@ namespace ClubBudgetManagementSystem
         //削除ボタン
         private void btDelete_Click(object sender, EventArgs e)
         {
+            DialogResult dr = MessageBox.Show("選択された行データを削除します。よろしいですか？", "情報の削除", MessageBoxButtons.OKCancel);
+
+            if (dr == System.Windows.Forms.DialogResult.OK)
+            {
+                managesBindingSource.RemoveAt(managesDataGridView.CurrentRow.Index);
+                managesBindingNavigatorSaveItem_Click(sender, e);
+                //データを消した後選択されたデータの承認の有無を調べる
+                string confirm = managesDataGridView.CurrentRow.Cells[8].Value.ToString();
+                ConfirmCheck(confirm);
+            }
             
+#if false
             try
             {
                 DialogResult dr = MessageBox.Show("選択された行データを削除します。よろしいですか？", "情報の削除", MessageBoxButtons.OKCancel);
@@ -309,7 +315,7 @@ namespace ClubBudgetManagementSystem
             {
                 MessageBox.Show(ex.Message);
             }
-            
+#endif
         }
 
         //領収書の画像追加
@@ -344,7 +350,7 @@ namespace ClubBudgetManagementSystem
                 tbSummary.Text = managesDataGridView.CurrentRow.Cells[6].Value.ToString();
                 pbReceipt.Image = ByteArrayToImage((byte[])managesDataGridView.CurrentRow.Cells[7].Value);
 
-                string confirm = managesDataGridView.CurrentRow.Cells[8].Value.ToString();
+                confirm = managesDataGridView.CurrentRow.Cells[8].Value.ToString();
                 ConfirmCheck(confirm);
 
             }
@@ -434,6 +440,12 @@ namespace ClubBudgetManagementSystem
             {
                 e.Cancel = true; //削除をキャンセル
             }
+        }
+
+        private void pbReceipt_Click(object sender, EventArgs e)
+        {
+            ImageExpand ie = new ImageExpand(pbReceipt.Image);
+            ie.ShowDialog();
         }
     }
 }

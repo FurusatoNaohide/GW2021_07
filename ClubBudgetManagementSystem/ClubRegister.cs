@@ -27,7 +27,10 @@ namespace ClubBudgetManagementSystem
 
         private void ClubRegister_Load(object sender, EventArgs e)
         {
-            
+
+            #region
+            // TODO: このコード行はデータを 'infosys202107DataSet.Club' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.clubTableAdapter.Fill(this.infosys202107DataSet.Club);
 
             clubDataGridView.Columns[0].Visible = false;
             clubDataGridView.Columns[1].HeaderText = "部活ID";
@@ -35,13 +38,13 @@ namespace ClubBudgetManagementSystem
             clubDataGridView.Columns[3].Visible = false;
 
             clubDataGridView.Columns[1].Width = 70;
-        }
+            clubDataGridView.Columns[2].Width = 167;
+            clubDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
+            #endregion
 
-        private void btConnect_Click(object sender, EventArgs e)
-        {
-            // TODO: このコード行はデータを 'infosys202107DataSet.Club' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.clubTableAdapter.Fill(this.infosys202107DataSet.Club);
-            this.btAdd_Click(sender, e);
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
 
         private void btAdd_Click(object sender, EventArgs e)
@@ -52,17 +55,27 @@ namespace ClubBudgetManagementSystem
 
         private void btRegister_Click(object sender, EventArgs e)
         {
-            clubDataGridView.CurrentRow.Cells[1].Value = tbClubID.Text;
-            clubDataGridView.CurrentRow.Cells[2].Value = tbClubName.Text;
-            clubDataGridView.CurrentRow.Cells[3].Value = tbPassWord.Text;
+            if (tbClubID.Text != "" && tbClubName.Text != "" && tbPassWord.Text != "")
+            {
+                btAdd_Click(sender, e);
 
-            this.Validate();
-            this.clubBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.infosys202107DataSet);
+                clubDataGridView.CurrentRow.Cells[1].Value = tbClubID.Text;
+                clubDataGridView.CurrentRow.Cells[2].Value = tbClubName.Text;
+                clubDataGridView.CurrentRow.Cells[3].Value = tbPassWord.Text;
 
-            tbClubID.Text = null;
-            tbClubName.Text = null;
-            tbPassWord.Text = null;
+                this.Validate();
+                this.clubBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.infosys202107DataSet);
+
+                tbClubID.Text = null;
+                tbClubName.Text = null;
+                tbPassWord.Text = null;
+            }
+            else
+            {
+                MessageBox.Show("必須事項をすべて入力してください。");
+            }
+            
         }
 
         private void btCancel_Click(object sender, EventArgs e)

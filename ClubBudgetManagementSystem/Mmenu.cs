@@ -44,5 +44,12 @@ namespace ClubBudgetManagementSystem
             YearOrMonth yom = new YearOrMonth();
             yom.ShowDialog();
         }
+
+        private void Mmenu_Load(object sender, EventArgs e)
+        {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+        }
     }
 }

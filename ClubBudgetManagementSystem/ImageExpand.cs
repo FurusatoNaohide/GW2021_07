@@ -10,21 +10,20 @@ using System.Windows.Forms;
 
 namespace ClubBudgetManagementSystem
 {
-    public partial class Umenu : Form
+    public partial class ImageExpand : Form
     {
-        public Umenu()
+        private Image _Recipt;
+        public ImageExpand(Image recipt)
         {
             InitializeComponent();
+            _Recipt = recipt;
         }
 
-        private void btLogin_Click(object sender, EventArgs e)
+        private void ImageExpand_Load(object sender, EventArgs e)
         {
-            UserLogin ulogin = new UserLogin();
-            ulogin.ShowDialog();
-        }
+            this.Size = new Size(_Recipt.Width+20, _Recipt.Height+40);
+            pbRecipt.Image = _Recipt;
 
-        private void Umenu_Load(object sender, EventArgs e)
-        {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

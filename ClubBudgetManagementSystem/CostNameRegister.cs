@@ -27,16 +27,19 @@ namespace ClubBudgetManagementSystem
 
         private void CostNameRegister_Load(object sender, EventArgs e)
         {
+            #region
+            // TODO: このコード行はデータを 'infosys202107DataSet.Cost' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.costTableAdapter.Fill(this.infosys202107DataSet.Cost);
+
             costDataGridView.Columns[0].Visible = false;
             costDataGridView.Columns[1].HeaderText = "費用名";
 
-        }
+            costDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
+            #endregion
 
-        private void btConnect_Click(object sender, EventArgs e)
-        {
-            // TODO: このコード行はデータを 'infosys202107DataSet.Cost' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.costTableAdapter.Fill(this.infosys202107DataSet.Cost);
-            btAdd_Click(sender, e);
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
 
         private void btAdd_Click(object sender, EventArgs e)
@@ -47,13 +50,22 @@ namespace ClubBudgetManagementSystem
 
         private void btRegister_Click(object sender, EventArgs e)
         {
-            costDataGridView.CurrentRow.Cells[1].Value = tbCostName.Text;
+            if (tbCostName.Text != "")
+            {
+                btAdd_Click(sender, e);
+                costDataGridView.CurrentRow.Cells[1].Value = tbCostName.Text;
 
-            this.Validate();
-            this.costBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.infosys202107DataSet);
+                this.Validate();
+                this.costBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.infosys202107DataSet);
 
-            tbCostName.Text = null;
+                tbCostName.Text = null;
+            }
+            else
+            {
+                MessageBox.Show("費用名を入力してください。");
+            }
+            
         }
 
         private void btCancel_Click(object sender, EventArgs e)

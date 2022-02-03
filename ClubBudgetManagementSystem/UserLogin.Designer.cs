@@ -46,9 +46,10 @@ namespace ClubBudgetManagementSystem
             // 
             // btCancel
             // 
-            this.btCancel.Location = new System.Drawing.Point(290, 152);
+            this.btCancel.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btCancel.Location = new System.Drawing.Point(267, 146);
             this.btCancel.Name = "btCancel";
-            this.btCancel.Size = new System.Drawing.Size(63, 24);
+            this.btCancel.Size = new System.Drawing.Size(100, 30);
             this.btCancel.TabIndex = 11;
             this.btCancel.Text = "キャンセル";
             this.btCancel.UseVisualStyleBackColor = true;
@@ -56,9 +57,10 @@ namespace ClubBudgetManagementSystem
             // 
             // btOk
             // 
-            this.btOk.Location = new System.Drawing.Point(221, 152);
+            this.btOk.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btOk.Location = new System.Drawing.Point(197, 146);
             this.btOk.Name = "btOk";
-            this.btOk.Size = new System.Drawing.Size(63, 24);
+            this.btOk.Size = new System.Drawing.Size(64, 30);
             this.btOk.TabIndex = 10;
             this.btOk.Text = "OK";
             this.btOk.UseVisualStyleBackColor = true;

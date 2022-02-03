@@ -76,6 +76,12 @@
     <Compile Include="CostNameRegister.Designer.cs">
       <DependentUpon>CostNameRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImageExpand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageExpand.Designer.cs">
+      <DependentUpon>ImageExpand.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mmenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TopMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopMenu.Designer.cs">
+      <DependentUpon>TopMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Umenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +140,9 @@
     <EmbeddedResource Include="CostNameRegister.resx">
       <DependentUpon>CostNameRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ImageExpand.resx">
+      <DependentUpon>ImageExpand.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mmenu.resx">
       <DependentUpon>Mmenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +158,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TopMenu.resx">
+      <DependentUpon>TopMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Umenu.resx">
       <DependentUpon>Umenu.cs</DependentUpon>
     </EmbeddedResource>

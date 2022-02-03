@@ -47,6 +47,10 @@ namespace ClubBudgetManagementSystem
             }
 
             cbYear.Text = _year;
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
 
         //Managesにある提出日から年度を検出

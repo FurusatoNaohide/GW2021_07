@@ -10,20 +10,26 @@ using System.Windows.Forms;
 
 namespace ClubBudgetManagementSystem
 {
-    public partial class Umenu : Form
+    public partial class TopMenu : Form
     {
-        public Umenu()
+        public TopMenu()
         {
             InitializeComponent();
         }
 
-        private void btLogin_Click(object sender, EventArgs e)
+        private void btRegist_Click(object sender, EventArgs e)
         {
-            UserLogin ulogin = new UserLogin();
-            ulogin.ShowDialog();
+            Umenu u = new Umenu();
+            u.ShowDialog();
         }
 
-        private void Umenu_Load(object sender, EventArgs e)
+        private void btManage_Click(object sender, EventArgs e)
+        {
+            Mmenu m = new Mmenu();
+            m.ShowDialog();
+        }
+
+        private void TopMenu_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
