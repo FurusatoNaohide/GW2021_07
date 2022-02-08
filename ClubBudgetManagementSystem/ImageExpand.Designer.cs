@@ -50,7 +50,7 @@ namespace ClubBudgetManagementSystem
             this.ClientSize = new System.Drawing.Size(417, 464);
             this.Controls.Add(this.pbRecipt);
             this.Name = "ImageExpand";
-            this.Text = "ImageExpand";
+            this.Text = "領収書画面";
             this.Load += new System.EventHandler(this.ImageExpand_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbRecipt)).EndInit();
             this.ResumeLayout(false);

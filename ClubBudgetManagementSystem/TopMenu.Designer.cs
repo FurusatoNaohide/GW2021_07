@@ -36,10 +36,10 @@ namespace ClubBudgetManagementSystem
             // 
             // btManage
             // 
-            this.btManage.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btManage.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btManage.Location = new System.Drawing.Point(101, 165);
             this.btManage.Name = "btManage";
-            this.btManage.Size = new System.Drawing.Size(162, 67);
+            this.btManage.Size = new System.Drawing.Size(152, 67);
             this.btManage.TabIndex = 13;
             this.btManage.Text = "管理用";
             this.btManage.UseVisualStyleBackColor = true;
@@ -47,10 +47,10 @@ namespace ClubBudgetManagementSystem
             // 
             // btRegist
             // 
-            this.btRegist.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btRegist.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btRegist.Location = new System.Drawing.Point(101, 75);
             this.btRegist.Name = "btRegist";
-            this.btRegist.Size = new System.Drawing.Size(162, 67);
+            this.btRegist.Size = new System.Drawing.Size(152, 67);
             this.btRegist.TabIndex = 12;
             this.btRegist.Text = "提出用";
             this.btRegist.UseVisualStyleBackColor = true;
@@ -58,10 +58,10 @@ namespace ClubBudgetManagementSystem
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(80, 21);
+            this.label1.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Location = new System.Drawing.Point(86, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 37);
+            this.label1.Size = new System.Drawing.Size(202, 37);
             this.label1.TabIndex = 11;
             this.label1.Text = "部費管理システム";
             // 
@@ -74,7 +74,7 @@ namespace ClubBudgetManagementSystem
             this.Controls.Add(this.btRegist);
             this.Controls.Add(this.label1);
             this.Name = "TopMenu";
-            this.Text = "TopMenu";
+            this.Text = "トップメニュー";
             this.Load += new System.EventHandler(this.TopMenu_Load);
             this.ResumeLayout(false);
 

@@ -444,6 +444,7 @@ namespace ClubBudgetManagementSystem
 
         private void pbReceipt_Click(object sender, EventArgs e)
         {
+            if (pbReceipt.Image == null) return;
             ImageExpand ie = new ImageExpand(pbReceipt.Image);
             ie.ShowDialog();
         }

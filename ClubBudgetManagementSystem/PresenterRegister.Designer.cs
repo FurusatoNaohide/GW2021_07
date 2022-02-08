@@ -113,7 +113,7 @@ namespace ClubBudgetManagementSystem
             this.presentersBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.presentersBindingNavigator.Name = "presentersBindingNavigator";
             this.presentersBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.presentersBindingNavigator.Size = new System.Drawing.Size(356, 25);
+            this.presentersBindingNavigator.Size = new System.Drawing.Size(316, 25);
             this.presentersBindingNavigator.TabIndex = 0;
             this.presentersBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -247,8 +247,8 @@ namespace ClubBudgetManagementSystem
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.Location = new System.Drawing.Point(12, 171);
+            this.label6.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label6.Location = new System.Drawing.Point(31, 183);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(137, 37);
             this.label6.TabIndex = 18;
@@ -256,25 +256,25 @@ namespace ClubBudgetManagementSystem
             // 
             // tbPresenterName
             // 
-            this.tbPresenterName.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbPresenterName.Location = new System.Drawing.Point(194, 105);
+            this.tbPresenterName.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbPresenterName.Location = new System.Drawing.Point(46, 138);
             this.tbPresenterName.Name = "tbPresenterName";
-            this.tbPresenterName.Size = new System.Drawing.Size(156, 31);
+            this.tbPresenterName.Size = new System.Drawing.Size(156, 34);
             this.tbPresenterName.TabIndex = 17;
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(13, 105);
+            this.label2.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Location = new System.Drawing.Point(31, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(184, 37);
             this.label2.TabIndex = 16;
-            this.label2.Text = "提出者名(必須)：";
+            this.label2.Text = "提出者名(必須)";
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(12, 41);
+            this.label1.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Location = new System.Drawing.Point(12, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(203, 37);
             this.label1.TabIndex = 15;
@@ -282,8 +282,8 @@ namespace ClubBudgetManagementSystem
             // 
             // btCancel
             // 
-            this.btCancel.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btCancel.Location = new System.Drawing.Point(226, 420);
+            this.btCancel.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btCancel.Location = new System.Drawing.Point(204, 414);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(94, 33);
             this.btCancel.TabIndex = 21;
@@ -293,8 +293,8 @@ namespace ClubBudgetManagementSystem
             // 
             // btRegister
             // 
-            this.btRegister.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btRegister.Location = new System.Drawing.Point(226, 381);
+            this.btRegister.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btRegister.Location = new System.Drawing.Point(204, 375);
             this.btRegister.Name = "btRegister";
             this.btRegister.Size = new System.Drawing.Size(94, 33);
             this.btRegister.TabIndex = 20;
@@ -306,7 +306,7 @@ namespace ClubBudgetManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(356, 475);
+            this.ClientSize = new System.Drawing.Size(316, 475);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btRegister);
             this.Controls.Add(this.label6);
@@ -316,7 +316,7 @@ namespace ClubBudgetManagementSystem
             this.Controls.Add(this.presentersDataGridView);
             this.Controls.Add(this.presentersBindingNavigator);
             this.Name = "PresenterRegister";
-            this.Text = "PresenterRegister";
+            this.Text = "提出者登録画面";
             this.Load += new System.EventHandler(this.PresenterRegister_Load);
             ((System.ComponentModel.ISupportInitialize)(this.infosys202107DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.presentersBindingSource)).EndInit();

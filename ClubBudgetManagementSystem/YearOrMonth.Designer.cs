@@ -85,7 +85,7 @@ namespace ClubBudgetManagementSystem
             // 
             // btCancel
             // 
-            this.btCancel.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btCancel.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btCancel.Location = new System.Drawing.Point(166, 322);
             this.btCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btCancel.Name = "btCancel";
@@ -97,7 +97,7 @@ namespace ClubBudgetManagementSystem
             // 
             // btOk
             // 
-            this.btOk.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btOk.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btOk.Location = new System.Drawing.Point(106, 321);
             this.btOk.Margin = new System.Windows.Forms.Padding(2);
             this.btOk.Name = "btOk";
@@ -114,7 +114,7 @@ namespace ClubBudgetManagementSystem
             this.gbRange.Controls.Add(this.rbYear);
             this.gbRange.Controls.Add(this.rbMonth);
             this.gbRange.Controls.Add(this.gbMonth);
-            this.gbRange.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.gbRange.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.gbRange.Location = new System.Drawing.Point(15, 13);
             this.gbRange.Margin = new System.Windows.Forms.Padding(2);
             this.gbRange.Name = "gbRange";
@@ -130,17 +130,18 @@ namespace ClubBudgetManagementSystem
             this.label1.Location = new System.Drawing.Point(14, 225);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 21);
+            this.label1.Size = new System.Drawing.Size(86, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "年度決算";
             // 
             // cbYear
             // 
+            this.cbYear.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cbYear.FormattingEnabled = true;
-            this.cbYear.Location = new System.Drawing.Point(61, 248);
+            this.cbYear.Location = new System.Drawing.Point(59, 251);
             this.cbYear.Margin = new System.Windows.Forms.Padding(2);
             this.cbYear.Name = "cbYear";
-            this.cbYear.Size = new System.Drawing.Size(124, 29);
+            this.cbYear.Size = new System.Drawing.Size(124, 28);
             this.cbYear.TabIndex = 0;
             // 
             // rbYear
@@ -149,7 +150,7 @@ namespace ClubBudgetManagementSystem
             this.rbYear.Location = new System.Drawing.Point(82, 36);
             this.rbYear.Margin = new System.Windows.Forms.Padding(2);
             this.rbYear.Name = "rbYear";
-            this.rbYear.Size = new System.Drawing.Size(91, 25);
+            this.rbYear.Size = new System.Drawing.Size(85, 28);
             this.rbYear.TabIndex = 1;
             this.rbYear.Tag = "1";
             this.rbYear.Text = "年度別";
@@ -162,7 +163,7 @@ namespace ClubBudgetManagementSystem
             this.rbMonth.Location = new System.Drawing.Point(8, 36);
             this.rbMonth.Margin = new System.Windows.Forms.Padding(2);
             this.rbMonth.Name = "rbMonth";
-            this.rbMonth.Size = new System.Drawing.Size(70, 25);
+            this.rbMonth.Size = new System.Drawing.Size(66, 28);
             this.rbMonth.TabIndex = 0;
             this.rbMonth.TabStop = true;
             this.rbMonth.Tag = "0";
@@ -198,7 +199,7 @@ namespace ClubBudgetManagementSystem
             this.rbApril.Location = new System.Drawing.Point(10, 24);
             this.rbApril.Margin = new System.Windows.Forms.Padding(2);
             this.rbApril.Name = "rbApril";
-            this.rbApril.Size = new System.Drawing.Size(60, 25);
+            this.rbApril.Size = new System.Drawing.Size(59, 28);
             this.rbApril.TabIndex = 3;
             this.rbApril.TabStop = true;
             this.rbApril.Tag = "3";
@@ -211,7 +212,7 @@ namespace ClubBudgetManagementSystem
             this.rbFebruary.Location = new System.Drawing.Point(79, 111);
             this.rbFebruary.Margin = new System.Windows.Forms.Padding(2);
             this.rbFebruary.Name = "rbFebruary";
-            this.rbFebruary.Size = new System.Drawing.Size(60, 25);
+            this.rbFebruary.Size = new System.Drawing.Size(59, 28);
             this.rbFebruary.TabIndex = 1;
             this.rbFebruary.Tag = "1";
             this.rbFebruary.Text = "2月";
@@ -223,7 +224,7 @@ namespace ClubBudgetManagementSystem
             this.rbMarch.Location = new System.Drawing.Point(154, 111);
             this.rbMarch.Margin = new System.Windows.Forms.Padding(2);
             this.rbMarch.Name = "rbMarch";
-            this.rbMarch.Size = new System.Drawing.Size(60, 25);
+            this.rbMarch.Size = new System.Drawing.Size(59, 28);
             this.rbMarch.TabIndex = 2;
             this.rbMarch.Tag = "2";
             this.rbMarch.Text = "3月";
@@ -235,7 +236,7 @@ namespace ClubBudgetManagementSystem
             this.rbMay.Location = new System.Drawing.Point(80, 24);
             this.rbMay.Margin = new System.Windows.Forms.Padding(2);
             this.rbMay.Name = "rbMay";
-            this.rbMay.Size = new System.Drawing.Size(60, 25);
+            this.rbMay.Size = new System.Drawing.Size(59, 28);
             this.rbMay.TabIndex = 4;
             this.rbMay.Tag = "4";
             this.rbMay.Text = "5月";
@@ -247,7 +248,7 @@ namespace ClubBudgetManagementSystem
             this.rbJanuary.Location = new System.Drawing.Point(10, 111);
             this.rbJanuary.Margin = new System.Windows.Forms.Padding(2);
             this.rbJanuary.Name = "rbJanuary";
-            this.rbJanuary.Size = new System.Drawing.Size(60, 25);
+            this.rbJanuary.Size = new System.Drawing.Size(59, 28);
             this.rbJanuary.TabIndex = 0;
             this.rbJanuary.Tag = "0";
             this.rbJanuary.Text = "1月";
@@ -259,7 +260,7 @@ namespace ClubBudgetManagementSystem
             this.rbJune.Location = new System.Drawing.Point(154, 24);
             this.rbJune.Margin = new System.Windows.Forms.Padding(2);
             this.rbJune.Name = "rbJune";
-            this.rbJune.Size = new System.Drawing.Size(60, 25);
+            this.rbJune.Size = new System.Drawing.Size(59, 28);
             this.rbJune.TabIndex = 5;
             this.rbJune.Tag = "5";
             this.rbJune.Text = "6月";
@@ -271,7 +272,7 @@ namespace ClubBudgetManagementSystem
             this.rbAugust.Location = new System.Drawing.Point(80, 53);
             this.rbAugust.Margin = new System.Windows.Forms.Padding(2);
             this.rbAugust.Name = "rbAugust";
-            this.rbAugust.Size = new System.Drawing.Size(60, 25);
+            this.rbAugust.Size = new System.Drawing.Size(59, 28);
             this.rbAugust.TabIndex = 7;
             this.rbAugust.Tag = "7";
             this.rbAugust.Text = "8月";
@@ -283,7 +284,7 @@ namespace ClubBudgetManagementSystem
             this.rbJuly.Location = new System.Drawing.Point(10, 53);
             this.rbJuly.Margin = new System.Windows.Forms.Padding(2);
             this.rbJuly.Name = "rbJuly";
-            this.rbJuly.Size = new System.Drawing.Size(60, 25);
+            this.rbJuly.Size = new System.Drawing.Size(59, 28);
             this.rbJuly.TabIndex = 6;
             this.rbJuly.Tag = "6";
             this.rbJuly.Text = "7月";
@@ -295,7 +296,7 @@ namespace ClubBudgetManagementSystem
             this.rbNovember.Location = new System.Drawing.Point(79, 82);
             this.rbNovember.Margin = new System.Windows.Forms.Padding(2);
             this.rbNovember.Name = "rbNovember";
-            this.rbNovember.Size = new System.Drawing.Size(71, 25);
+            this.rbNovember.Size = new System.Drawing.Size(71, 28);
             this.rbNovember.TabIndex = 10;
             this.rbNovember.Tag = "10";
             this.rbNovember.Text = "11月";
@@ -307,7 +308,7 @@ namespace ClubBudgetManagementSystem
             this.rbOctober.Location = new System.Drawing.Point(10, 82);
             this.rbOctober.Margin = new System.Windows.Forms.Padding(2);
             this.rbOctober.Name = "rbOctober";
-            this.rbOctober.Size = new System.Drawing.Size(71, 25);
+            this.rbOctober.Size = new System.Drawing.Size(71, 28);
             this.rbOctober.TabIndex = 9;
             this.rbOctober.Tag = "9";
             this.rbOctober.Text = "10月";
@@ -319,7 +320,7 @@ namespace ClubBudgetManagementSystem
             this.rbSeptember.Location = new System.Drawing.Point(154, 53);
             this.rbSeptember.Margin = new System.Windows.Forms.Padding(2);
             this.rbSeptember.Name = "rbSeptember";
-            this.rbSeptember.Size = new System.Drawing.Size(60, 25);
+            this.rbSeptember.Size = new System.Drawing.Size(59, 28);
             this.rbSeptember.TabIndex = 8;
             this.rbSeptember.Tag = "8";
             this.rbSeptember.Text = "9月";
@@ -331,7 +332,7 @@ namespace ClubBudgetManagementSystem
             this.rbDecember.Location = new System.Drawing.Point(154, 82);
             this.rbDecember.Margin = new System.Windows.Forms.Padding(2);
             this.rbDecember.Name = "rbDecember";
-            this.rbDecember.Size = new System.Drawing.Size(71, 25);
+            this.rbDecember.Size = new System.Drawing.Size(71, 28);
             this.rbDecember.TabIndex = 11;
             this.rbDecember.Tag = "11";
             this.rbDecember.Text = "12月";
@@ -346,7 +347,7 @@ namespace ClubBudgetManagementSystem
             this.Controls.Add(this.btOk);
             this.Controls.Add(this.gbRange);
             this.Name = "YearOrMonth";
-            this.Text = "YearOrMonth";
+            this.Text = "範囲選択画面";
             this.Load += new System.EventHandler(this.YearOrMonth_Load);
             ((System.ComponentModel.ISupportInitialize)(this.infosys202107DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.managesBindingSource)).EndInit();

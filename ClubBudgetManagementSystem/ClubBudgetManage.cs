@@ -223,6 +223,21 @@ namespace ClubBudgetManagementSystem
                 }
             }
             lbCostTotal.Text = "\\" + CostTotal.ToString("#,##0");
+            RaiseCorrectCheck();
+        }
+
+        private void RaiseCorrectCheck()
+        {
+            foreach (var item in this.infosys202107DataSet.Manages)
+            {
+                if (item.Confirmation.Contains("訂"))
+                {
+                    MessageBox.Show("訂正された部費情報があります。\r\n確認してください。");
+                    break;
+                }
+
+            }
+
         }
     }
 }

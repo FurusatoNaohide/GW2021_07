@@ -38,7 +38,7 @@ namespace ClubBudgetManagementSystem
             // 
             // btPresenterRegister
             // 
-            this.btPresenterRegister.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btPresenterRegister.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btPresenterRegister.Location = new System.Drawing.Point(229, 61);
             this.btPresenterRegister.Name = "btPresenterRegister";
             this.btPresenterRegister.Size = new System.Drawing.Size(162, 67);
@@ -49,7 +49,7 @@ namespace ClubBudgetManagementSystem
             // 
             // btCostNameRegister
             // 
-            this.btCostNameRegister.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btCostNameRegister.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btCostNameRegister.Location = new System.Drawing.Point(38, 144);
             this.btCostNameRegister.Name = "btCostNameRegister";
             this.btCostNameRegister.Size = new System.Drawing.Size(162, 67);
@@ -60,7 +60,7 @@ namespace ClubBudgetManagementSystem
             // 
             // btClubRegister
             // 
-            this.btClubRegister.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btClubRegister.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btClubRegister.Location = new System.Drawing.Point(38, 61);
             this.btClubRegister.Name = "btClubRegister";
             this.btClubRegister.Size = new System.Drawing.Size(162, 67);
@@ -71,7 +71,7 @@ namespace ClubBudgetManagementSystem
             // 
             // btManage
             // 
-            this.btManage.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btManage.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btManage.Location = new System.Drawing.Point(229, 144);
             this.btManage.Name = "btManage";
             this.btManage.Size = new System.Drawing.Size(162, 67);
@@ -82,10 +82,10 @@ namespace ClubBudgetManagementSystem
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(59, 9);
+            this.label1.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Location = new System.Drawing.Point(77, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(315, 37);
+            this.label1.Size = new System.Drawing.Size(284, 37);
             this.label1.TabIndex = 6;
             this.label1.Text = "部費管理システム　管理用";
             // 
@@ -100,7 +100,7 @@ namespace ClubBudgetManagementSystem
             this.Controls.Add(this.btManage);
             this.Controls.Add(this.label1);
             this.Name = "Mmenu";
-            this.Text = "Form1";
+            this.Text = "管理者用画面";
             this.Load += new System.EventHandler(this.Mmenu_Load);
             this.ResumeLayout(false);
 

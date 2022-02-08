@@ -46,7 +46,7 @@ namespace ClubBudgetManagementSystem
             // 
             // btCancel
             // 
-            this.btCancel.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btCancel.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btCancel.Location = new System.Drawing.Point(267, 146);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(100, 30);
@@ -57,7 +57,7 @@ namespace ClubBudgetManagementSystem
             // 
             // btOk
             // 
-            this.btOk.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btOk.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btOk.Location = new System.Drawing.Point(197, 146);
             this.btOk.Name = "btOk";
             this.btOk.Size = new System.Drawing.Size(64, 30);
@@ -68,16 +68,16 @@ namespace ClubBudgetManagementSystem
             // 
             // tbPassWord
             // 
-            this.tbPassWord.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbPassWord.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tbPassWord.Location = new System.Drawing.Point(133, 95);
             this.tbPassWord.Name = "tbPassWord";
             this.tbPassWord.PasswordChar = '*';
-            this.tbPassWord.Size = new System.Drawing.Size(209, 31);
+            this.tbPassWord.Size = new System.Drawing.Size(209, 34);
             this.tbPassWord.TabIndex = 9;
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label2.Location = new System.Drawing.Point(17, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 31);
@@ -86,18 +86,18 @@ namespace ClubBudgetManagementSystem
             // 
             // tbClubID
             // 
-            this.tbClubID.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbClubID.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tbClubID.Location = new System.Drawing.Point(133, 32);
             this.tbClubID.Name = "tbClubID";
-            this.tbClubID.Size = new System.Drawing.Size(209, 31);
+            this.tbClubID.Size = new System.Drawing.Size(209, 34);
             this.tbClubID.TabIndex = 7;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(44, 32);
+            this.label1.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Location = new System.Drawing.Point(31, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 31);
+            this.label1.Size = new System.Drawing.Size(105, 31);
             this.label1.TabIndex = 6;
             this.label1.Text = "部活ID：";
             // 

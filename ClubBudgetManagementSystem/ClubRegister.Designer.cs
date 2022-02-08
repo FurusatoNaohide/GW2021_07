@@ -229,7 +229,7 @@ namespace ClubBudgetManagementSystem
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.clubDataGridView.DataSource = this.clubBindingSource;
-            this.clubDataGridView.Location = new System.Drawing.Point(25, 313);
+            this.clubDataGridView.Location = new System.Drawing.Point(26, 371);
             this.clubDataGridView.MultiSelect = false;
             this.clubDataGridView.Name = "clubDataGridView";
             this.clubDataGridView.ReadOnly = true;
@@ -269,8 +269,8 @@ namespace ClubBudgetManagementSystem
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.Location = new System.Drawing.Point(21, 273);
+            this.label6.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label6.Location = new System.Drawing.Point(22, 331);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(137, 37);
             this.label6.TabIndex = 21;
@@ -278,60 +278,60 @@ namespace ClubBudgetManagementSystem
             // 
             // tbPassWord
             // 
-            this.tbPassWord.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbPassWord.Location = new System.Drawing.Point(209, 226);
+            this.tbPassWord.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbPassWord.Location = new System.Drawing.Point(55, 282);
             this.tbPassWord.Name = "tbPassWord";
             this.tbPassWord.PasswordChar = '*';
-            this.tbPassWord.Size = new System.Drawing.Size(191, 31);
+            this.tbPassWord.Size = new System.Drawing.Size(191, 34);
             this.tbPassWord.TabIndex = 20;
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label5.Location = new System.Drawing.Point(21, 227);
+            this.label5.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.Location = new System.Drawing.Point(22, 242);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(182, 37);
             this.label5.TabIndex = 19;
-            this.label5.Text = "パスワード(必須)：";
+            this.label5.Text = "パスワード(必須)";
             // 
             // tbClubID
             // 
-            this.tbClubID.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbClubID.Location = new System.Drawing.Point(209, 157);
+            this.tbClubID.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbClubID.Location = new System.Drawing.Point(55, 208);
             this.tbClubID.Name = "tbClubID";
-            this.tbClubID.Size = new System.Drawing.Size(191, 31);
+            this.tbClubID.Size = new System.Drawing.Size(191, 34);
             this.tbClubID.TabIndex = 18;
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.Location = new System.Drawing.Point(51, 157);
+            this.label4.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4.Location = new System.Drawing.Point(22, 168);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(161, 37);
             this.label4.TabIndex = 17;
-            this.label4.Text = "部活ID(必須)：";
+            this.label4.Text = "部活ID(必須)";
             // 
             // tbClubName
             // 
-            this.tbClubName.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbClubName.Location = new System.Drawing.Point(209, 94);
+            this.tbClubName.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbClubName.Location = new System.Drawing.Point(55, 134);
             this.tbClubName.Name = "tbClubName";
-            this.tbClubName.Size = new System.Drawing.Size(191, 31);
+            this.tbClubName.Size = new System.Drawing.Size(191, 34);
             this.tbClubName.TabIndex = 16;
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label2.Location = new System.Drawing.Point(21, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(182, 37);
             this.label2.TabIndex = 15;
-            this.label2.Text = "部活動名(必須)：";
+            this.label2.Text = "部活動名(必須)";
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(21, 36);
+            this.label1.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Location = new System.Drawing.Point(12, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(203, 37);
             this.label1.TabIndex = 14;
@@ -339,8 +339,8 @@ namespace ClubBudgetManagementSystem
             // 
             // btCancel
             // 
-            this.btCancel.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btCancel.Location = new System.Drawing.Point(311, 500);
+            this.btCancel.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btCancel.Location = new System.Drawing.Point(312, 558);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(94, 33);
             this.btCancel.TabIndex = 23;
@@ -350,8 +350,8 @@ namespace ClubBudgetManagementSystem
             // 
             // btRegister
             // 
-            this.btRegister.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btRegister.Location = new System.Drawing.Point(311, 461);
+            this.btRegister.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btRegister.Location = new System.Drawing.Point(312, 519);
             this.btRegister.Name = "btRegister";
             this.btRegister.Size = new System.Drawing.Size(94, 33);
             this.btRegister.TabIndex = 22;
@@ -363,7 +363,7 @@ namespace ClubBudgetManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 557);
+            this.ClientSize = new System.Drawing.Size(417, 626);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btRegister);
             this.Controls.Add(this.label6);
@@ -377,7 +377,7 @@ namespace ClubBudgetManagementSystem
             this.Controls.Add(this.clubDataGridView);
             this.Controls.Add(this.clubBindingNavigator);
             this.Name = "ClubRegister";
-            this.Text = "ClubRegister";
+            this.Text = "部活動登録画面";
             this.Load += new System.EventHandler(this.ClubRegister_Load);
             ((System.ComponentModel.ISupportInitialize)(this.infosys202107DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clubBindingSource)).EndInit();

@@ -53,16 +53,16 @@ namespace ClubBudgetManagementSystem
             // 
             // label12
             // 
-            this.label12.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label12.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label12.Location = new System.Drawing.Point(312, 50);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(81, 27);
+            this.label12.Size = new System.Drawing.Size(71, 27);
             this.label12.TabIndex = 31;
             this.label12.Text = "氏名：";
             // 
             // btAgain
             // 
-            this.btAgain.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btAgain.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btAgain.Location = new System.Drawing.Point(443, 377);
             this.btAgain.Name = "btAgain";
             this.btAgain.Size = new System.Drawing.Size(101, 42);
@@ -73,7 +73,7 @@ namespace ClubBudgetManagementSystem
             // 
             // btApproval
             // 
-            this.btApproval.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btApproval.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btApproval.Location = new System.Drawing.Point(332, 377);
             this.btApproval.Name = "btApproval";
             this.btApproval.Size = new System.Drawing.Size(88, 42);
@@ -84,8 +84,8 @@ namespace ClubBudgetManagementSystem
             // 
             // lbMoney
             // 
-            this.lbMoney.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbMoney.Location = new System.Drawing.Point(87, 293);
+            this.lbMoney.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbMoney.Location = new System.Drawing.Point(87, 288);
             this.lbMoney.Name = "lbMoney";
             this.lbMoney.Size = new System.Drawing.Size(186, 26);
             this.lbMoney.TabIndex = 28;
@@ -93,8 +93,8 @@ namespace ClubBudgetManagementSystem
             // 
             // lbSummary
             // 
-            this.lbSummary.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbSummary.Location = new System.Drawing.Point(87, 167);
+            this.lbSummary.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbSummary.Location = new System.Drawing.Point(87, 163);
             this.lbSummary.Name = "lbSummary";
             this.lbSummary.Size = new System.Drawing.Size(196, 121);
             this.lbSummary.TabIndex = 27;
@@ -102,8 +102,8 @@ namespace ClubBudgetManagementSystem
             // 
             // lbCost
             // 
-            this.lbCost.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbCost.Location = new System.Drawing.Point(87, 134);
+            this.lbCost.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbCost.Location = new System.Drawing.Point(87, 129);
             this.lbCost.Name = "lbCost";
             this.lbCost.Size = new System.Drawing.Size(186, 26);
             this.lbCost.TabIndex = 26;
@@ -111,8 +111,8 @@ namespace ClubBudgetManagementSystem
             // 
             // lbUsedDate
             // 
-            this.lbUsedDate.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbUsedDate.Location = new System.Drawing.Point(108, 96);
+            this.lbUsedDate.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbUsedDate.Location = new System.Drawing.Point(108, 91);
             this.lbUsedDate.Name = "lbUsedDate";
             this.lbUsedDate.Size = new System.Drawing.Size(186, 26);
             this.lbUsedDate.TabIndex = 25;
@@ -120,8 +120,8 @@ namespace ClubBudgetManagementSystem
             // 
             // tbRemarks
             // 
-            this.tbRemarks.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbRemarks.Location = new System.Drawing.Point(84, 327);
+            this.tbRemarks.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbRemarks.Location = new System.Drawing.Point(84, 324);
             this.tbRemarks.Multiline = true;
             this.tbRemarks.Name = "tbRemarks";
             this.tbRemarks.Size = new System.Drawing.Size(210, 191);
@@ -129,7 +129,7 @@ namespace ClubBudgetManagementSystem
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label7.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label7.Location = new System.Drawing.Point(16, 129);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 26);
@@ -138,7 +138,7 @@ namespace ClubBudgetManagementSystem
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label6.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label6.Location = new System.Drawing.Point(16, 163);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 26);
@@ -147,7 +147,7 @@ namespace ClubBudgetManagementSystem
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label5.Location = new System.Drawing.Point(16, 288);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 36);
@@ -156,7 +156,7 @@ namespace ClubBudgetManagementSystem
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.Location = new System.Drawing.Point(16, 324);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 33);
@@ -165,7 +165,7 @@ namespace ClubBudgetManagementSystem
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label3.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.Location = new System.Drawing.Point(14, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 28);
@@ -185,17 +185,17 @@ namespace ClubBudgetManagementSystem
             // 
             // lbName
             // 
-            this.lbName.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbName.Location = new System.Drawing.Point(399, 55);
+            this.lbName.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbName.Location = new System.Drawing.Point(389, 50);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(155, 22);
+            this.lbName.Size = new System.Drawing.Size(155, 27);
             this.lbName.TabIndex = 17;
             this.lbName.Text = "○○○○";
             // 
             // lbPDate
             // 
-            this.lbPDate.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbPDate.Location = new System.Drawing.Point(108, 57);
+            this.lbPDate.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbPDate.Location = new System.Drawing.Point(108, 50);
             this.lbPDate.Name = "lbPDate";
             this.lbPDate.Size = new System.Drawing.Size(186, 26);
             this.lbPDate.TabIndex = 16;
@@ -203,7 +203,7 @@ namespace ClubBudgetManagementSystem
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.Location = new System.Drawing.Point(14, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 26);
@@ -212,7 +212,7 @@ namespace ClubBudgetManagementSystem
             // 
             // lbAttention
             // 
-            this.lbAttention.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbAttention.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbAttention.Location = new System.Drawing.Point(316, 431);
             this.lbAttention.Name = "lbAttention";
             this.lbAttention.Size = new System.Drawing.Size(238, 87);
@@ -221,7 +221,7 @@ namespace ClubBudgetManagementSystem
             // 
             // label8
             // 
-            this.label8.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label8.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label8.Location = new System.Drawing.Point(12, 9);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(138, 29);
@@ -253,7 +253,7 @@ namespace ClubBudgetManagementSystem
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.lbPDate);
             this.Name = "ClubBudgetConfirm";
-            this.Text = "ClubBudgetConfirm";
+            this.Text = "詳細情報画面";
             this.Load += new System.EventHandler(this.ClubBudgetConfirm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbReceipt)).EndInit();
             this.ResumeLayout(false);

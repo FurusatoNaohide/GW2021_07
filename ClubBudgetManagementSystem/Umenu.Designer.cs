@@ -35,7 +35,7 @@ namespace ClubBudgetManagementSystem
             // 
             // btLogin
             // 
-            this.btLogin.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btLogin.Font = new System.Drawing.Font("Meiryo UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLogin.Location = new System.Drawing.Point(96, 139);
             this.btLogin.Name = "btLogin";
             this.btLogin.Size = new System.Drawing.Size(225, 67);
@@ -46,7 +46,7 @@ namespace ClubBudgetManagementSystem
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Font = new System.Drawing.Font("Meiryo UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(57, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(315, 37);
@@ -61,7 +61,7 @@ namespace ClubBudgetManagementSystem
             this.Controls.Add(this.btLogin);
             this.Controls.Add(this.label1);
             this.Name = "Umenu";
-            this.Text = "Umenu";
+            this.Text = "提出者用画面";
             this.Load += new System.EventHandler(this.Umenu_Load);
             this.ResumeLayout(false);
 

@@ -227,7 +227,7 @@ namespace ClubBudgetManagementSystem
             // 
             // lbYearOrMonth
             // 
-            this.lbYearOrMonth.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbYearOrMonth.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbYearOrMonth.Location = new System.Drawing.Point(21, 23);
             this.lbYearOrMonth.Name = "lbYearOrMonth";
             this.lbYearOrMonth.Size = new System.Drawing.Size(218, 26);
@@ -237,7 +237,7 @@ namespace ClubBudgetManagementSystem
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label3.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.Location = new System.Drawing.Point(17, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 26);
@@ -246,16 +246,17 @@ namespace ClubBudgetManagementSystem
             // 
             // cbClub
             // 
+            this.cbClub.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cbClub.FormattingEnabled = true;
             this.cbClub.Location = new System.Drawing.Point(146, 76);
             this.cbClub.Name = "cbClub";
-            this.cbClub.Size = new System.Drawing.Size(151, 20);
+            this.cbClub.Size = new System.Drawing.Size(151, 23);
             this.cbClub.TabIndex = 10;
             this.cbClub.SelectedIndexChanged += new System.EventHandler(this.cbClub_SelectedIndexChanged);
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.Location = new System.Drawing.Point(245, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 26);
@@ -264,7 +265,7 @@ namespace ClubBudgetManagementSystem
             // 
             // lbCostTotal
             // 
-            this.lbCostTotal.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbCostTotal.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbCostTotal.Location = new System.Drawing.Point(249, 612);
             this.lbCostTotal.Name = "lbCostTotal";
             this.lbCostTotal.Size = new System.Drawing.Size(207, 23);
@@ -274,7 +275,7 @@ namespace ClubBudgetManagementSystem
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label2.Location = new System.Drawing.Point(113, 612);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 23);
@@ -309,7 +310,7 @@ namespace ClubBudgetManagementSystem
             this.Controls.Add(this.label1);
             this.Controls.Add(this.managesDataGridView);
             this.Name = "ClubBudgetManage";
-            this.Text = "ClubBudgetManage";
+            this.Text = "部費報告書画面";
             this.Load += new System.EventHandler(this.ClubBudgetManage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.infosys202107DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.managesBindingSource)).EndInit();
