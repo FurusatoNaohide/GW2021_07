@@ -96,9 +96,16 @@ namespace ClubBudgetManagementSystem
             managesDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
             #endregion
 
+            cbClub.KeyPress += new KeyPressEventHandler(CbClub_KeyPress);
+
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+        }
+
+        private void CbClub_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
 
         private void setCbClub(string name)

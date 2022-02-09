@@ -85,6 +85,7 @@ namespace ClubBudgetManagementSystem
             // 
             // btCancel
             // 
+            this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btCancel.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btCancel.Location = new System.Drawing.Point(166, 322);
             this.btCancel.Margin = new System.Windows.Forms.Padding(2);
@@ -97,6 +98,7 @@ namespace ClubBudgetManagementSystem
             // 
             // btOk
             // 
+            this.btOk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btOk.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btOk.Location = new System.Drawing.Point(106, 321);
             this.btOk.Margin = new System.Windows.Forms.Padding(2);

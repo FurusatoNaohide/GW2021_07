@@ -62,6 +62,7 @@ namespace ClubBudgetManagementSystem
             // 
             // btAgain
             // 
+            this.btAgain.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btAgain.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btAgain.Location = new System.Drawing.Point(443, 377);
             this.btAgain.Name = "btAgain";
@@ -73,6 +74,7 @@ namespace ClubBudgetManagementSystem
             // 
             // btApproval
             // 
+            this.btApproval.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btApproval.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btApproval.Location = new System.Drawing.Point(332, 377);
             this.btApproval.Name = "btApproval";

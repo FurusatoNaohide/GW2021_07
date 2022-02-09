@@ -48,9 +48,16 @@ namespace ClubBudgetManagementSystem
 
             cbYear.Text = _year;
 
+            cbYear.KeyPress += new KeyPressEventHandler(CbYear_KeyPress);
+
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+        }
+
+        private void CbYear_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
 
         //Managesにある提出日から年度を検出

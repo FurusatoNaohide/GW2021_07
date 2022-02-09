@@ -35,6 +35,7 @@ namespace ClubBudgetManagementSystem
             // 
             // btLogin
             // 
+            this.btLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btLogin.Font = new System.Drawing.Font("Meiryo UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLogin.Location = new System.Drawing.Point(96, 139);
             this.btLogin.Name = "btLogin";

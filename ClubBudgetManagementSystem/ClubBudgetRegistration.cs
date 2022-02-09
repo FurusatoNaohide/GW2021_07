@@ -78,6 +78,9 @@ namespace ClubBudgetManagementSystem
 
             managesDataGridView.Columns[9].Width = 347;
             managesDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
+
+            cbPresenter.KeyPress += new KeyPressEventHandler(Cb_KeyPress);
+            cbCostName.KeyPress += new KeyPressEventHandler(Cb_KeyPress);
             #endregion
 
             //Presentersにある提出者リストをComboBoxに登録
@@ -91,12 +94,18 @@ namespace ClubBudgetManagementSystem
                 setCbCost(item.Name);
             }
 
-            lbAttention.Text = "※選択した画像をクリックすると、実際のサイズで表示されます。\r\n";
+            lbAttention.Text = "※選択した画像をクリックすると、実際のサイズで表示されます。\r\n※提出者名と費用名は直接入力することはできません。あらかじめ登録した情報をお使いください。\r\n";
             RaiseAgainCheck();
 
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+        }
+
+        //ComboBoxからの入力を無効
+        private void Cb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
 
         private void setCbCost(string name)
@@ -122,7 +131,7 @@ namespace ClubBudgetManagementSystem
             {
                 if (item.Confirmation.Contains("再"))
                     {
-                        lbAttention.Text += "※再提出を求められた部費情報があります。訂正して更新しなおしてください。";
+                        lbAttention.Text += "※再提出を求められた部費情報があります。訂正して更新しなおしてください。\r\n";
                         //MessageBox.Show("再提出を求められた部費情報があります。\r\n訂正して更新しなおしてください。");
                         break;
                     }
@@ -157,7 +166,7 @@ namespace ClubBudgetManagementSystem
 #endregion
         }
 
-        //初期化
+        //初期値
         private void Initialize()
         {
             dtpPresenDate.Value = DateTime.Today;
@@ -172,8 +181,12 @@ namespace ClubBudgetManagementSystem
         //新規追加+登録ボタン
         private void btRegister_Click(object sender, EventArgs e)
         {
-            DataAddNew();
-            DataRegister(sender, e);
+            DialogResult dr = MessageBox.Show("情報を登録します。よろしいですか？\r\n※必須事項をすべて入力されているか確認してください。","情報の登録",MessageBoxButtons.OKCancel);
+            if (dr == System.Windows.Forms.DialogResult.OK)
+            {
+                DataAddNew();
+                DataRegister(sender, e);
+            }
         }
 
         //登録・更新
@@ -270,6 +283,7 @@ namespace ClubBudgetManagementSystem
         //更新ボタン
         private void btUpdate_Click(object sender, EventArgs e)
         {
+            if (managesDataGridView.CurrentRow == null) return;
             if (managesDataGridView.CurrentRow.Cells == null) return;
             DialogResult dr = MessageBox.Show("選択された行データを更新します。よろしいですか？", "情報の更新", MessageBoxButtons.OKCancel);
             if (dr == System.Windows.Forms.DialogResult.OK)
@@ -282,6 +296,7 @@ namespace ClubBudgetManagementSystem
         //削除ボタン
         private void btDelete_Click(object sender, EventArgs e)
         {
+            if (managesDataGridView.CurrentRow == null) return;
             DialogResult dr = MessageBox.Show("選択された行データを削除します。よろしいですか？", "情報の削除", MessageBoxButtons.OKCancel);
 
             if (dr == System.Windows.Forms.DialogResult.OK)
@@ -316,6 +331,16 @@ namespace ClubBudgetManagementSystem
                 MessageBox.Show(ex.Message);
             }
 #endif
+        }
+
+        //初期値を設定する
+        private void btDefault_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("入力情報を初期値に戻します。よろしいですか？\r\n※登録されているデータには影響はありません。","初期値設定",MessageBoxButtons.OKCancel);
+            if (dr == System.Windows.Forms.DialogResult.OK)
+            {
+                Initialize();
+            }
         }
 
         //領収書の画像追加
@@ -371,6 +396,10 @@ namespace ClubBudgetManagementSystem
                     btDelete.Enabled = false;
                     break;
                 case "再":
+                    btUpdate.Enabled = true;
+                    btDelete.Enabled = false;
+                    break;
+                case "訂":
                     btUpdate.Enabled = true;
                     btDelete.Enabled = false;
                     break;
@@ -448,5 +477,6 @@ namespace ClubBudgetManagementSystem
             ImageExpand ie = new ImageExpand(pbReceipt.Image);
             ie.ShowDialog();
         }
+
     }
 }

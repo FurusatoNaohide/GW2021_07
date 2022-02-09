@@ -39,9 +39,7 @@ namespace ClubBudgetManagementSystem
             this.costTableAdapter = new ClubBudgetManagementSystem.infosys202107DataSetTableAdapters.CostTableAdapter();
             this.presentersTableAdapter = new ClubBudgetManagementSystem.infosys202107DataSetTableAdapters.PresentersTableAdapter();
             this.managesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -93,6 +91,7 @@ namespace ClubBudgetManagementSystem
             this.lbNowYear = new System.Windows.Forms.Label();
             this.lbNowMonth = new System.Windows.Forms.Label();
             this.lbAttention = new System.Windows.Forms.Label();
+            this.btDefault = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.infosys202107DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.managesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.managesBindingNavigator)).BeginInit();
@@ -141,10 +140,10 @@ namespace ClubBudgetManagementSystem
             // 
             // managesBindingNavigator
             // 
-            this.managesBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.managesBindingNavigator.AddNewItem = null;
             this.managesBindingNavigator.BindingSource = this.managesBindingSource;
             this.managesBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.managesBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.managesBindingNavigator.DeleteItem = null;
             this.managesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -155,8 +154,6 @@ namespace ClubBudgetManagementSystem
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
             this.managesBindingNavigatorSaveItem});
             this.managesBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.managesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -169,30 +166,12 @@ namespace ClubBudgetManagementSystem
             this.managesBindingNavigator.TabIndex = 0;
             this.managesBindingNavigator.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "新規追加";
-            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(29, 22);
             this.bindingNavigatorCountItem.Text = "/ {0}";
             this.bindingNavigatorCountItem.ToolTipText = "項目の総数";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "削除";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -421,6 +400,7 @@ namespace ClubBudgetManagementSystem
             // 
             // btDelete
             // 
+            this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btDelete.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btDelete.Location = new System.Drawing.Point(277, 398);
             this.btDelete.Name = "btDelete";
@@ -432,8 +412,9 @@ namespace ClubBudgetManagementSystem
             // 
             // btUpdate
             // 
+            this.btUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btUpdate.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btUpdate.Location = new System.Drawing.Point(114, 398);
+            this.btUpdate.Location = new System.Drawing.Point(109, 398);
             this.btUpdate.Name = "btUpdate";
             this.btUpdate.Size = new System.Drawing.Size(81, 42);
             this.btUpdate.TabIndex = 44;
@@ -443,8 +424,9 @@ namespace ClubBudgetManagementSystem
             // 
             // btRegister
             // 
+            this.btRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btRegister.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btRegister.Location = new System.Drawing.Point(29, 398);
+            this.btRegister.Location = new System.Drawing.Point(24, 398);
             this.btRegister.Name = "btRegister";
             this.btRegister.Size = new System.Drawing.Size(79, 42);
             this.btRegister.TabIndex = 43;
@@ -472,6 +454,7 @@ namespace ClubBudgetManagementSystem
             // 
             // btReceiptDelete
             // 
+            this.btReceiptDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btReceiptDelete.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btReceiptDelete.Location = new System.Drawing.Point(630, 89);
             this.btReceiptDelete.Name = "btReceiptDelete";
@@ -483,6 +466,7 @@ namespace ClubBudgetManagementSystem
             // 
             // btReceiptOpen
             // 
+            this.btReceiptOpen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btReceiptOpen.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btReceiptOpen.Location = new System.Drawing.Point(548, 89);
             this.btReceiptOpen.Name = "btReceiptOpen";
@@ -628,15 +612,28 @@ namespace ClubBudgetManagementSystem
             this.lbAttention.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbAttention.Location = new System.Drawing.Point(18, 672);
             this.lbAttention.Name = "lbAttention";
-            this.lbAttention.Size = new System.Drawing.Size(694, 48);
+            this.lbAttention.Size = new System.Drawing.Size(694, 63);
             this.lbAttention.TabIndex = 51;
             this.lbAttention.Text = "※";
+            // 
+            // btDefault
+            // 
+            this.btDefault.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btDefault.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btDefault.Location = new System.Drawing.Point(579, 738);
+            this.btDefault.Name = "btDefault";
+            this.btDefault.Size = new System.Drawing.Size(129, 34);
+            this.btDefault.TabIndex = 52;
+            this.btDefault.Text = "初期値設定";
+            this.btDefault.UseVisualStyleBackColor = true;
+            this.btDefault.Click += new System.EventHandler(this.btDefault_Click);
             // 
             // ClubBudgetRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(724, 729);
+            this.ClientSize = new System.Drawing.Size(724, 784);
+            this.Controls.Add(this.btDefault);
             this.Controls.Add(this.lbAttention);
             this.Controls.Add(this.lbNowMonth);
             this.Controls.Add(this.lbNowYear);
@@ -688,9 +685,7 @@ namespace ClubBudgetManagementSystem
         private infosys202107DataSetTableAdapters.ManagesTableAdapter managesTableAdapter;
         private infosys202107DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator managesBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
@@ -745,5 +740,6 @@ namespace ClubBudgetManagementSystem
         private System.Windows.Forms.Label lbNowYear;
         private System.Windows.Forms.Label lbNowMonth;
         private System.Windows.Forms.Label lbAttention;
+        private System.Windows.Forms.Button btDefault;
     }
 }

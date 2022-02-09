@@ -37,6 +37,13 @@ namespace ClubBudgetManagementSystem
             costDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
             #endregion
 
+            #region
+            //foreach (var item in infosys202107DataSet.Cost)
+            //{
+            //    listBox1.Items.Add(item.Name);
+            //}
+            #endregion
+
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -54,7 +61,6 @@ namespace ClubBudgetManagementSystem
             {
                 btAdd_Click(sender, e);
                 costDataGridView.CurrentRow.Cells[1].Value = tbCostName.Text;
-
                 this.Validate();
                 this.costBindingSource.EndEdit();
                 this.tableAdapterManager.UpdateAll(this.infosys202107DataSet);
