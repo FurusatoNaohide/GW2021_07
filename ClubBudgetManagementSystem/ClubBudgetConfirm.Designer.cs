@@ -54,7 +54,7 @@ namespace ClubBudgetManagementSystem
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label12.Location = new System.Drawing.Point(312, 50);
+            this.label12.Location = new System.Drawing.Point(339, 47);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(71, 27);
             this.label12.TabIndex = 31;
@@ -64,7 +64,7 @@ namespace ClubBudgetManagementSystem
             // 
             this.btAgain.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btAgain.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btAgain.Location = new System.Drawing.Point(443, 377);
+            this.btAgain.Location = new System.Drawing.Point(470, 374);
             this.btAgain.Name = "btAgain";
             this.btAgain.Size = new System.Drawing.Size(101, 42);
             this.btAgain.TabIndex = 30;
@@ -76,7 +76,7 @@ namespace ClubBudgetManagementSystem
             // 
             this.btApproval.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btApproval.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btApproval.Location = new System.Drawing.Point(332, 377);
+            this.btApproval.Location = new System.Drawing.Point(359, 374);
             this.btApproval.Name = "btApproval";
             this.btApproval.Size = new System.Drawing.Size(88, 42);
             this.btApproval.TabIndex = 29;
@@ -116,7 +116,7 @@ namespace ClubBudgetManagementSystem
             this.lbUsedDate.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbUsedDate.Location = new System.Drawing.Point(108, 91);
             this.lbUsedDate.Name = "lbUsedDate";
-            this.lbUsedDate.Size = new System.Drawing.Size(186, 26);
+            this.lbUsedDate.Size = new System.Drawing.Size(208, 26);
             this.lbUsedDate.TabIndex = 25;
             this.lbUsedDate.Text = "＿＿年＿月＿日";
             // 
@@ -177,7 +177,7 @@ namespace ClubBudgetManagementSystem
             // pbReceipt
             // 
             this.pbReceipt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbReceipt.Location = new System.Drawing.Point(310, 80);
+            this.pbReceipt.Location = new System.Drawing.Point(337, 77);
             this.pbReceipt.Name = "pbReceipt";
             this.pbReceipt.Size = new System.Drawing.Size(244, 277);
             this.pbReceipt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -188,7 +188,7 @@ namespace ClubBudgetManagementSystem
             // lbName
             // 
             this.lbName.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbName.Location = new System.Drawing.Point(389, 50);
+            this.lbName.Location = new System.Drawing.Point(416, 47);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(155, 27);
             this.lbName.TabIndex = 17;
@@ -199,7 +199,7 @@ namespace ClubBudgetManagementSystem
             this.lbPDate.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbPDate.Location = new System.Drawing.Point(108, 50);
             this.lbPDate.Name = "lbPDate";
-            this.lbPDate.Size = new System.Drawing.Size(186, 26);
+            this.lbPDate.Size = new System.Drawing.Size(208, 26);
             this.lbPDate.TabIndex = 16;
             this.lbPDate.Text = "＿＿年＿月＿＿日";
             // 
@@ -215,7 +215,7 @@ namespace ClubBudgetManagementSystem
             // lbAttention
             // 
             this.lbAttention.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbAttention.Location = new System.Drawing.Point(316, 431);
+            this.lbAttention.Location = new System.Drawing.Point(343, 428);
             this.lbAttention.Name = "lbAttention";
             this.lbAttention.Size = new System.Drawing.Size(238, 87);
             this.lbAttention.TabIndex = 33;
@@ -234,7 +234,7 @@ namespace ClubBudgetManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(578, 540);
+            this.ClientSize = new System.Drawing.Size(615, 540);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lbAttention);
             this.Controls.Add(this.label1);

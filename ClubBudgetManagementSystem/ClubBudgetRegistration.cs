@@ -304,6 +304,7 @@ namespace ClubBudgetManagementSystem
                 managesBindingSource.RemoveAt(managesDataGridView.CurrentRow.Index);
                 managesBindingNavigatorSaveItem_Click(sender, e);
                 //データを消した後選択されたデータの承認の有無を調べる
+                if (managesDataGridView.CurrentRow == null) return;
                 string confirm = managesDataGridView.CurrentRow.Cells[8].Value.ToString();
                 ConfirmCheck(confirm);
             }
